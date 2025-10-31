@@ -1,0 +1,22 @@
+
+exp: TextClassification 
+
+
+mode:
+  - evaluate
+  - analyze 
+
+models:
+  hf_text_classification_model:
+    - model_pargo
+      
+datafpath: /home/username/par_eval_data_go.tsv
+
+predfpath: /home/username/predictions/predictions_pargo.tsv 
+
+resutlsfpath: /home/username/results/results_pargo.tsv
+
+device: cuda:0
+
+
+giveAllLabels: True

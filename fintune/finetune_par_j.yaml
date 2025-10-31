@@ -1,0 +1,18 @@
+
+
+exp: MinimalPair
+
+mode:
+  - train
+
+models:
+  hf_causal_model:
+    - distilbert/distilgpt2
+
+trainfpath: /home/username/par_training_data_j.tsv
+
+validfpath: /home/username/validate_par_j.tsv
+
+modelfpath: /home/username/model_parj
+
+loadPretrained: True

@@ -1,0 +1,19 @@
+
+exp: TextClassification 
+
+
+mode:
+  - evaluate 
+
+models:
+  hf_text_classification_model:
+    - model_sentj
+      
+datafpath: /home/username/sent_eval_data_j.tsv
+
+predfpath: /home/username/predictions/predictions_sentj.tsv
+
+device: cuda:0
+
+
+giveAllLabels: True

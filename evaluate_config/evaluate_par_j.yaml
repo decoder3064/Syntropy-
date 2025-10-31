@@ -1,0 +1,22 @@
+
+exp: TextClassification 
+
+
+mode:
+  - evaluate
+  - analyze 
+
+models:
+  hf_text_classification_model:
+    - model_parj
+      
+datafpath: /home/username/par_eval_data_j.tsv
+
+predfpath: /home/username/predictions/predictions_parj.tsv 
+
+resutlsfpath: /home/username/results/results_parj.tsv
+
+device: cuda:0
+
+
+giveAllLabels: True

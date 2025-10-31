@@ -6,9 +6,11 @@
 #### Steps:
 1. Load datasets (Goemotions/Journal).
 2. Identify shared labels(emotions) on both datasets.
-3. Turn both datasets into the same format.
-4. Create a new set that combined them both and balances emotions on an even distributions.
-5. Create training, validation, and testing sets splitting the data into 70% training data, 15% validation, and 15% test data.
+5. Curate emotions and leave the non overlaping examples aside.
+6. Create paragraph datasets for both Goemotions and Journal -> specify headers: text, souce(goemotions/journal),label(emotion), and type(paragraph).
+7. Create setence dataset (by dividing each paragraph into sentences) for both Goemotions and Journal -> specify headers: text, souce(goemotions/journal),label(emotion), and type(sentence).
+8. Manually label sentences in paragraphs for Journal dataset, and assume that emotion labeled for the sentence on Goemotions is the most accurate label.
+10. Create training, validation, and testing sets splitting the data into 70% training data, 15% validation, and 15% test data.
    
 
 

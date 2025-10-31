@@ -1,6 +1,15 @@
 # Syntropy-
 
 
+### Outlining a sequence of steps required to go from the dataset to the sample tsv files. 
+
+#### Step 1:
+
+
+
+
+
+
 
 
 

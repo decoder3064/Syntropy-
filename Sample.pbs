@@ -1,0 +1,58 @@
+#!/bin/bash
+### A name for the job - No spaces allowed
+#PBS -N Python_Script
+### Specify how many nodes and how many processors
+#PBS -q gpu
+#PBS -l nodes=1:ppn=1
+### Specify the maximum time allowed for the job to run in each node - example 24 hours
+#PBS -l walltime=24:00:00
+### Specify Memory Limit
+#PBS -l mem=1991mb
+### Specify a file for the console output - if any
+#  PBS -o localhost:/home/yli2/pbs/PythonScripts/outcomes/simple_outcome.log
+### Specify a file for the console error output - if any 
+#PBS -e localhost:/home/yli2/pbs/PythonScripts/errors/simple_error.log
+### Receive an email when the job begins execution (b), when it ends (e), and when it encounters an error (a)
+#PBS -m bae
+### Specify an email for pds@colgate.edu to send notifications
+#PBS -M yli2@colgate.edu
+### Use submission environment, including all shell variables.
+#PBS -V
+###          ###
+# Queue States #
+###          ###
+##  Q (queued): The job is waiting in the queue to be scheduled.
+##  R (running): The job is running on a compute node.
+##  H (held): The job is in a held state and is not eligible to run.
+##  E (error): The job has encountered an error and cannot be run.
+##  T (moved): The job has been moved to a new location in the queue.
+##  W (waiting): The job is waiting for its execution window.
+##  S (suspended): The job has been suspended by the system or the user.
+##  C (completed): The job has completed successfully.
+##
+##  qsub example.pbs : submit the example.pbs job to the queue
+##  qstat -u yli2 : check submitted job status for specific user
+##  qstat -f <jobID> : check job queue output
+##  qdel <jobID> : delete job (only allowed for jobs you (yli2) submitted)
+###
+### Start job from the directory it was submitted.
+#!/bin/bash
+#PBS -N Python_Script
+#PBS -l nodes=1:ppn=4
+#PBS -l walltime=24:00:00
+#PBS -l mem=32gb
+#PBS -o /home/yli2/pbs/PythonScripts/outcomes/simple_outcome.log
+#PBS -e /home/yli2/pbs/PythonScripts/errors/simple_error.log
+#PBS -m bae
+#PBS -M yli2@colgate.edu
+#PBS -V
+
+# Move to the directory where main.py is
+
+module load python/3.11  # load python module if required
+
+# Initialize conda and activate environment
+source /local/JupyterHub/bin/activate && conda activate nlp || { echo "Conda environment activation failed"; exit 1; }
+
+
+python create_datasets.py

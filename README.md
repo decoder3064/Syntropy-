@@ -5,7 +5,7 @@
 
 #### Steps:
 1. Load datasets (Goemotions/Journal).
-2. Indentify shared labels(emotions) on both datasets.
+2. Identify shared labels(emotions) on both datasets.
 3. Turn both datasets into the same format.
 4. Create a new set that combined them both and balances emotions on an even distributions.
 5. Create training, validation, and testing sets splitting the data into 70% training data, 15% validation, and 15% test data.

@@ -9,7 +9,7 @@
 5. Curate emotions and leave the non overlaping examples aside.
 6. Create paragraph datasets for both Goemotions and Journal -> specify headers: text, souce(goemotions/journal),label(emotion), and type(paragraph).
 7. Create setence dataset (by dividing each paragraph into sentences) for both Goemotions and Journal -> specify headers: text, souce(goemotions/journal),label(emotion), and type(sentence).
-8. Manually label sentences in paragraphs for Journal dataset, and assume that emotion labeled for the sentence on Goemotions is the most accurate label.
+8. Manually label sentences in paragraphs for Journal dataset, and assume that all sentences in the goemotion dataset shared the same label as its pargraph.
 10. Create training, validation, and testing sets splitting the data into 70% training data, 15% validation, and 15% test data.
    
 

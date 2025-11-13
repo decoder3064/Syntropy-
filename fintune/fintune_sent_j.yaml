@@ -1,17 +1,50 @@
 
-exp: MinimalPair
+exp: TextClassification
 
 mode:
   - train
 
 models:
-  hf_causal_model:
-    - distilbert/distilgpt2
+  hf_text_classification_model: 
 
-trainfpath: /home/username/sent_training_data_j.tsv
 
-validfpath: /home/username/validate_sent_j.tsv
+trainfpath: /home/user/final/Syntropy-/data/
 
-modelfpath: /home/username/model_sentj
+validfpath: /home/user/final/Syntropy-/data/
+
+modelfpath: /home/user/final/
+
+textLabel: text
 
 loadPretrained: True
+
+
+id2label:
+  0: admiration
+  1: amusement
+  2: anger
+  3: annoyance
+  4: approval
+  5: caring
+  6: confusion
+  7: curiosity
+  8: desire
+  9: disappointment
+  10: disapproval
+  11: disgust
+  12: embarrassment
+  13: excitement
+  14: fear
+  15: gratitude
+  16: grief
+  17: joy
+  18: love
+  19: nervousness
+  20: optimism
+  21: pride
+  22: realization
+  23: relief
+  24: remorse
+  25: sadness
+  26: surprise
+  27: neutral

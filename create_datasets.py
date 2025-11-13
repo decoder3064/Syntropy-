@@ -47,9 +47,21 @@ def convert_goemotions_to_format(input_tsv_path):
     return pd.DataFrame(output_rows)
 
 def main():
-    # Paths
-    goemotions_path = '/Users/davidreyes/Documents/Syntropy/GoEmotions/data/'
-    output_base_path = '/Users/davidreyes/Documents/Syntropy/data/'
+    # ============================================
+    # CONFIGURATION - CHANGE THESE PATHS
+    # ============================================
+    
+    # Local GoEmotions input path
+    goemotions_input_path = '/Users/davidreyes/Documents/Syntropy/GoEmotions/data/'
+    
+    # Output path - saves in data/go_emotions_processed/
+    output_base_path = '/Users/davidreyes/Documents/Syntropy/data/go_emotions_processed/'
+    
+    # REPLACE 'username' WITH YOUR ACTUAL TURING USERNAME
+    turing_username = 'username'  # ← CHANGE THIS!
+    turing_output_path = f'/home/{turing_username}/data/go_emotions_processed/'
+    
+    # ============================================
     
     # Create output directory if it doesn't exist
     os.makedirs(output_base_path, exist_ok=True)
@@ -60,31 +72,32 @@ def main():
     
     # Load train, dev, test
     print("\n📂 Loading train.tsv...")
-    train_df = convert_goemotions_to_format(f'{goemotions_path}train.tsv')
+    train_df = convert_goemotions_to_format(f'{goemotions_input_path}train.tsv')
     print(f"   ✅ Loaded {len(train_df)} training examples")
     
     print("\n📂 Loading dev.tsv...")
-    validate_df = convert_goemotions_to_format(f'{goemotions_path}dev.tsv')
+    validate_df = convert_goemotions_to_format(f'{goemotions_input_path}dev.tsv')
     print(f"   ✅ Loaded {len(validate_df)} validation examples")
     
     print("\n📂 Loading test.tsv...")
-    test_df = convert_goemotions_to_format(f'{goemotions_path}test.tsv')
+    test_df = convert_goemotions_to_format(f'{goemotions_input_path}test.tsv')
     print(f"   ✅ Loaded {len(test_df)} test examples")
     
     print("\n" + "=" * 70)
-    print("Saving datasets")
+    print("Saving datasets with NLP Scholar naming convention")
     print("=" * 70)
     
-    # Save as TSV (tab-separated)
+    # Save with NLP Scholar naming convention
     print("\n💾 Saving as TSV format...")
-    train_df.to_csv(f'{output_base_path}train.tsv', sep='\t', index=False)
-    print(f"   ✅ Saved: {output_base_path}train.tsv")
     
-    validate_df.to_csv(f'{output_base_path}validate.tsv', sep='\t', index=False)
-    print(f"   ✅ Saved: {output_base_path}validate.tsv")
+    train_df.to_csv(f'{output_base_path}sent_training_data_go.tsv', sep='\t', index=False)
+    print(f"   ✅ Saved: {output_base_path}sent_training_data_go.tsv")
     
-    test_df.to_csv(f'{output_base_path}test.tsv', sep='\t', index=False)
-    print(f"   ✅ Saved: {output_base_path}test.tsv")
+    validate_df.to_csv(f'{output_base_path}validate_sent_go.tsv', sep='\t', index=False)
+    print(f"   ✅ Saved: {output_base_path}validate_sent_go.tsv")
+    
+    test_df.to_csv(f'{output_base_path}test_sent_go.tsv', sep='\t', index=False)
+    print(f"   ✅ Saved: {output_base_path}test_sent_go.tsv")
     
     print("\n" + "=" * 70)
     print("Summary & Sample Data")
@@ -107,11 +120,24 @@ def main():
     print("\n" + "=" * 70)
     print("✅ ALL DATASETS CREATED AND SAVED!")
     print("=" * 70)
-    print(f"\n📁 Output location: {output_base_path}")
+    print(f"\n📁 Local output location: {output_base_path}")
     print("\nFiles created:")
-    print("   • train.tsv      - Training set (original GoEmotions train)")
-    print("   • validate.tsv   - Validation set (original GoEmotions dev)")
-    print("   • test.tsv       - Test set (original GoEmotions test)")
+    print("   • sent_training_data_go.tsv  - Training set")
+    print("   • validate_sent_go.tsv       - Validation set")
+    print("   • test_sent_go.tsv           - Test set")
+    
+    print("\n" + "=" * 70)
+    print("📝 For NLP Scholar config (after uploading to Turing):")
+    print("=" * 70)
+    print(f"\ntrainfpath: {turing_output_path}sent_training_data_go.tsv")
+    print(f"validfpath: {turing_output_path}validate_sent_go.tsv")
+    print(f"testfpath:  {turing_output_path}test_sent_go.tsv")
+    print(f"modelfpath: {turing_output_path}model_sentgo")
+    
+    print("\n💡 Remember to:")
+    print(f"   1. Change 'username' to your Turing username in the script")
+    print(f"   2. Upload the files from {output_base_path} to Turing")
+    print(f"   3. Create the directory on Turing: mkdir -p {turing_output_path}")
 
 if __name__ == "__main__":
     main()

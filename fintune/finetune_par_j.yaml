@@ -18,33 +18,20 @@ textLabel: text
 
 loadPretrained: True
 
+device: cuda:0
+
+numLabels: 12
 
 id2label:
-  0: admiration
-  1: amusement
-  2: anger
-  3: annoyance
-  4: approval
-  5: caring
-  6: confusion
-  7: curiosity
-  8: desire
-  9: disappointment
-  10: disapproval
-  11: disgust
-  12: embarrassment
-  13: excitement
-  14: fear
-  15: gratitude
-  16: grief
-  17: joy
-  18: love
-  19: nervousness
-  20: optimism
-  21: pride
-  22: realization
-  23: relief
-  24: remorse
-  25: sadness
-  26: surprise
-  27: neutral
+  0: anger
+  1: confusion
+  2: disgust
+  3: embarrassment
+  4: excitement
+  5: fear
+  6: joy
+  7: nervousness
+  8: neutral
+  9: pride
+  10: sadness
+  11: surprise

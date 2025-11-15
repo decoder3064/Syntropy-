@@ -65,14 +65,19 @@ def balance_dataset(df, split_name):
     """
     Balance dataset so all emotions have equal representation
     Uses undersampling - samples down to the size of the least frequent emotion
+    Preserves column structure (including 'target' for test sets)
     """
     
     print(f"\n{'='*70}")
     print(f"BALANCING {split_name.upper()} DATASET")
     print(f"{'='*70}")
     
+    # Determine if this is test set (has 'target' column instead of 'label')
+    is_test = 'target' in df.columns
+    label_col = 'target' if is_test else 'label'
+    
     # Get counts before balancing
-    label_counts_before = df['label'].value_counts()
+    label_counts_before = df[label_col].value_counts()
     print(f"\n📊 Distribution BEFORE balancing:")
     for label, count in label_counts_before.items():
         pct = (count / len(df)) * 100
@@ -85,7 +90,7 @@ def balance_dataset(df, split_name):
     # Sample each emotion to have exactly min_count examples
     balanced_dfs = []
     for emotion in OVERLAPPING_EMOTIONS:
-        emotion_df = df[df['label'] == emotion]
+        emotion_df = df[df[label_col] == emotion]
         
         if len(emotion_df) > min_count:
             # Undersample to min_count
@@ -99,8 +104,11 @@ def balance_dataset(df, split_name):
     balanced_df = pd.concat(balanced_dfs, ignore_index=True)
     balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
     
+    # Reset text_id to be sequential
+    balanced_df['text_id'] = range(len(balanced_df))
+    
     # Show after balancing
-    label_counts_after = balanced_df['label'].value_counts()
+    label_counts_after = balanced_df[label_col].value_counts()
     print(f"\n📊 Distribution AFTER balancing:")
     for label, count in label_counts_after.items():
         pct = (count / len(balanced_df)) * 100
@@ -115,6 +123,7 @@ def filter_goemotions_by_overlap(input_tsv_path, split_name):
     """
     Filter GoEmotions TSV to only include overlapping emotions
     Returns DataFrame with: text, label (emotion name), source
+    For test split: adds text_id column and renames label to target
     """
     
     # Read TSV
@@ -124,6 +133,7 @@ def filter_goemotions_by_overlap(input_tsv_path, split_name):
     output_rows = []
     skipped_count = 0
     kept_count = 0
+    text_id_counter = 0
     
     for idx, row in df.iterrows():
         text = row['text']
@@ -139,17 +149,30 @@ def filter_goemotions_by_overlap(input_tsv_path, split_name):
                 
                 if emotion_name in OVERLAPPING_EMOTIONS:
                     output_rows.append({
+                        'text_id': text_id_counter,
                         'text': text,
                         'label': emotion_name,
                         'source': 'goemotions'
                     })
+                    text_id_counter += 1
                     kept_count += 1
                 else:
                     skipped_count += 1
     
     print(f"\n{split_name.upper()} - Kept: {kept_count:,} | Skipped: {skipped_count:,}")
     
-    return pd.DataFrame(output_rows)
+    result_df = pd.DataFrame(output_rows)
+    
+    # For test split, rename 'label' to 'target'
+    if split_name.lower() == 'test':
+        result_df = result_df.rename(columns={'label': 'target'})
+        # Reorder columns: text_id, text, target, source
+        result_df = result_df[['text_id', 'text', 'target', 'source']]
+    else:
+        # For train/validation: text_id, text, label, source
+        result_df = result_df[['text_id', 'text', 'label', 'source']]
+    
+    return result_df
 
 
 def main():
@@ -160,17 +183,20 @@ def main():
     # Local GoEmotions input path
     goemotions_input_path = '/Users/davidreyes/Documents/Syntropy/GoEmotions/data/'
     
-    # Output path - saves in data/go_emotions_processed/
-    output_base_path = '/Users/davidreyes/Documents/Syntropy/data/go_emotions_processed/'
+    # Output paths - separate directories for normalized vs unnormalized
+    output_unnormalized_path = '/Users/davidreyes/Documents/Syntropy/data/go_emotions_processed_unnormalized/'
+    output_normalized_path = '/Users/davidreyes/Documents/Syntropy/data/go_emotions_processed_normalized/'
     
     # REPLACE WITH YOUR TURING USERNAME
     turing_username = 'fdavis'  # ← CHANGE THIS!
-    turing_output_path = f'/home/{turing_username}/data/go_emotions_processed/'
+    turing_unnormalized_path = f'/home/{turing_username}/data/go_emotions_processed_unnormalized/'
+    turing_normalized_path = f'/home/{turing_username}/data/go_emotions_processed_normalized/'
     
     # ============================================
     
-    # Create output directory
-    os.makedirs(output_base_path, exist_ok=True)
+    # Create output directories
+    os.makedirs(output_unnormalized_path, exist_ok=True)
+    os.makedirs(output_normalized_path, exist_ok=True)
     
     print("\n" + "=" * 70)
     print("FILTERING GOEMOTIONS DATASETS")
@@ -186,78 +212,126 @@ def main():
     print("\n📂 Loading and filtering test.tsv...")
     test_df = filter_goemotions_by_overlap(f'{goemotions_input_path}test.tsv', 'test')
     
+    print("\n" + "=" * 70)
+    print("SAVING UNNORMALIZED (FULL) DATASETS")
+    print("=" * 70)
+    
+    # Save UNNORMALIZED (full filtered data)
+    train_df.to_csv(f'{output_unnormalized_path}sent_training_data_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_unnormalized_path}sent_training_data_go.tsv")
+    
+    validate_df.to_csv(f'{output_unnormalized_path}validate_sent_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_unnormalized_path}validate_sent_go.tsv")
+    
+    test_df.to_csv(f'{output_unnormalized_path}test_sent_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_unnormalized_path}test_sent_go.tsv")
+    
     # Balance datasets
     print("\n" + "=" * 70)
     print("BALANCING DATASETS FOR EQUAL EMOTION DISTRIBUTION")
     print("=" * 70)
     
-    train_df = balance_dataset(train_df, 'train')
-    validate_df = balance_dataset(validate_df, 'validation')
-    test_df = balance_dataset(test_df, 'test')
+    train_balanced = balance_dataset(train_df, 'train')
+    validate_balanced = balance_dataset(validate_df, 'validation')
+    test_balanced = balance_dataset(test_df, 'test')
     
+    # Save NORMALIZED (balanced)
     print("\n" + "=" * 70)
-    print("SAVING FILTERED DATASETS")
+    print("SAVING NORMALIZED (BALANCED) DATASETS")
     print("=" * 70)
     
-    # Save with NLP Scholar naming convention
-    train_df.to_csv(f'{output_base_path}sent_training_data_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_base_path}sent_training_data_go.tsv")
+    train_balanced.to_csv(f'{output_normalized_path}sent_training_data_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_normalized_path}sent_training_data_go.tsv")
     
-    validate_df.to_csv(f'{output_base_path}validate_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_base_path}validate_sent_go.tsv")
+    validate_balanced.to_csv(f'{output_normalized_path}validate_sent_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_normalized_path}validate_sent_go.tsv")
     
-    test_df.to_csv(f'{output_base_path}test_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_base_path}test_sent_go.tsv")
+    test_balanced.to_csv(f'{output_normalized_path}test_sent_go.tsv', sep='\t', index=False)
+    print(f"✅ Saved: {output_normalized_path}test_sent_go.tsv")
     
     print("\n" + "=" * 70)
-    print("DATASET STATISTICS")
+    print("DATASET STATISTICS - UNNORMALIZED (FULL)")
     print("=" * 70)
     
-    print(f"\n📊 Filtered Dataset Sizes:")
+    print(f"\n📊 Dataset Sizes (full filtered):")
     print(f"   Training:   {len(train_df):,} examples")
     print(f"   Validation: {len(validate_df):,} examples")
     print(f"   Test:       {len(test_df):,} examples")
     print(f"   Total:      {len(train_df) + len(validate_df) + len(test_df):,} examples")
     
-    print("\n📋 Label Distribution in Training Set:")
+    print("\n📋 Label Distribution in Training Set (unnormalized):")
     label_counts = train_df['label'].value_counts()
     for label, count in label_counts.items():
         pct = (count / len(train_df)) * 100
         print(f"   {label:15s}: {count:5,} ({pct:5.2f}%)")
     
-    print("\n📝 Sample from Training Set:")
-    print(train_df.head(10).to_string(index=False))
-    
     print("\n" + "=" * 70)
-    print("✅ ALL FILTERED DATASETS CREATED!")
-    print("=" * 70)
-    print(f"\n📁 Local output: {output_base_path}")
-    
-    print("\n" + "=" * 70)
-    print("CONFIG FOR NLP SCHOLAR (after uploading to Turing)")
+    print("DATASET STATISTICS - NORMALIZED (BALANCED)")
     print("=" * 70)
     
-    print("\nexp: TextClassification")
-    print("\nmode:")
-    print("  - train")
-    print("\nmodels:")
-    print("  hf_text_classification_model:")
-    print("    - bert-large-uncased")
-    print(f"\ntrainfpath: {turing_output_path}sent_training_data_go.tsv")
-    print(f"validfpath: {turing_output_path}validate_sent_go.tsv")
-    print(f"modelfpath: {turing_output_path}model_goemotions_filtered")
-    print("\ntextLabel: text")
-    print("loadPretrained: True")
-    print("numLabels:", len(OVERLAPPING_EMOTIONS))
-    print("\nid2label:")
-    for new_id, emotion in sorted(FILTERED_ID_TO_LABEL.items()):
-        print(f"  {new_id}: {emotion}")
+    print(f"\n📊 Dataset Sizes (balanced):")
+    print(f"   Training:   {len(train_balanced):,} examples")
+    print(f"   Validation: {len(validate_balanced):,} examples")
+    print(f"   Test:       {len(test_balanced):,} examples")
+    print(f"   Total:      {len(train_balanced) + len(validate_balanced) + len(test_balanced):,} examples")
     
-    print("\n💡 Next Steps:")
-    print(f"   1. Upload files to Turing: scp {output_base_path}* {turing_username}@turing:{turing_output_path}")
-    print(f"   2. Create directory on Turing: mkdir -p {turing_output_path}")
-    print("   3. Update your config file with paths above")
-    print("   4. Submit PBS job with GPU queue")
+    print("\n📝 Sample from Training Set (balanced):")
+    print(train_balanced.head(10).to_string(index=False))
+    
+    print("\n" + "=" * 70)
+    print("✅ ALL DATASETS CREATED!")
+    print("=" * 70)
+    
+    print(f"\n📁 UNNORMALIZED output: {output_unnormalized_path}")
+    print(f"📁 NORMALIZED output:   {output_normalized_path}")
+    
+    print("\n📦 Files created:")
+    print("\n   UNNORMALIZED (full filtered - larger, imbalanced):")
+    print(f"     {output_unnormalized_path}")
+    print("       • sent_training_data_go.tsv")
+    print("       • validate_sent_go.tsv")
+    print("       • test_sent_go.tsv")
+    
+    print("\n   NORMALIZED (balanced - smaller, equal distribution):")
+    print(f"     {output_normalized_path}")
+    print("       • sent_training_data_go.tsv")
+    print("       • validate_sent_go.tsv")
+    print("       • test_sent_go.tsv")
+    
+    print("\n" + "=" * 70)
+    print("TRAINING RECOMMENDATIONS")
+    print("=" * 70)
+    
+    print("\n💡 Strategy: Train BOTH models and compare")
+    print(f"\n   Model A - UNNORMALIZED ({len(train_df):,} training examples):")
+    print("     ✅ More data → better representations")
+    print("     ✅ Real-world emotion distribution")
+    print("     ⚠️  Imbalanced → may favor frequent emotions")
+    print("     💡 Use class weights or focal loss")
+    
+    print(f"\n   Model B - NORMALIZED ({len(train_balanced):,} training examples):")
+    print("     ✅ Equal learning per emotion")
+    print("     ✅ Fair evaluation across all categories")
+    print("     ⚠️  Much less data overall")
+    print("     💡 Good baseline for comparison")
+    
+    print("\n" + "=" * 70)
+    print("CONFIG EXAMPLES FOR NLP SCHOLAR")
+    print("=" * 70)
+    
+    print("\n# Config for UNNORMALIZED (full) dataset:")
+    print(f"trainfpath: {turing_unnormalized_path}sent_training_data_go.tsv")
+    print(f"validfpath: {turing_unnormalized_path}validate_sent_go.tsv")
+    print(f"modelfpath: {turing_unnormalized_path}model_goemotions_full")
+    
+    print("\n# Config for NORMALIZED (balanced) dataset:")
+    print(f"trainfpath: {turing_normalized_path}sent_training_data_go.tsv")
+    print(f"validfpath: {turing_normalized_path}validate_sent_go.tsv")
+    print(f"modelfpath: {turing_normalized_path}model_goemotions_balanced")
+    
+    print("\n📤 Upload to Turing:")
+    print(f"   scp -r {output_unnormalized_path} {turing_username}@turing:/home/{turing_username}/data/")
+    print(f"   scp -r {output_normalized_path} {turing_username}@turing:/home/{turing_username}/data/")
 
 if __name__ == "__main__":
     main()

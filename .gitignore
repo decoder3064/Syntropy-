@@ -1,0 +1,7 @@
+# Ignore fine-tune Sent GO files (cover common filename variants)
+# Matches files like fintune/finetune_sent_go.yaml or fintune/fintune_sent_go.yaml
+fintune/*sent*go*.yaml
+finetune/*sent*go*.yaml
+
+# Ignore evaluation configuration directory
+evaluate_config/

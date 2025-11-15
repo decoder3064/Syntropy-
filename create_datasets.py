@@ -104,8 +104,8 @@ def balance_dataset(df, split_name):
     balanced_df = pd.concat(balanced_dfs, ignore_index=True)
     balanced_df = balanced_df.sample(frac=1, random_state=42).reset_index(drop=True)
     
-    # Reset text_id to be sequential
-    balanced_df['text_id'] = range(len(balanced_df))
+    # Reset textid to be sequential
+    balanced_df['textid'] = range(len(balanced_df))
     
     # Show after balancing
     label_counts_after = balanced_df[label_col].value_counts()
@@ -149,7 +149,7 @@ def filter_goemotions_by_overlap(input_tsv_path, split_name):
                 
                 if emotion_name in OVERLAPPING_EMOTIONS:
                     output_rows.append({
-                        'text_id': text_id_counter,
+                        'textid': text_id_counter,
                         'text': text,
                         'label': emotion_name,
                         'source': 'goemotions'
@@ -166,11 +166,11 @@ def filter_goemotions_by_overlap(input_tsv_path, split_name):
     # For test split, rename 'label' to 'target'
     if split_name.lower() == 'test':
         result_df = result_df.rename(columns={'label': 'target'})
-        # Reorder columns: text_id, text, target, source
-        result_df = result_df[['text_id', 'text', 'target', 'source']]
+        # Reorder columns: textid, text, target, source
+        result_df = result_df[['textid', 'text', 'target', 'source']]
     else:
-        # For train/validation: text_id, text, label, source
-        result_df = result_df[['text_id', 'text', 'label', 'source']]
+        # For train/validation: textid, text, label, source
+        result_df = result_df[['textid', 'text', 'label', 'source']]
     
     return result_df
 

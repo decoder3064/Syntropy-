@@ -92,15 +92,20 @@ def create_splits(df, train_size=0.0, val_size=0.0, test_size=1.0, random_state=
     print("=" * 70)
     
     # For zero-shot (test_size=1.0), everything goes to test
-    if test_size == 1.0:
+    if test_size >= 1.0 or (train_size == 0.0 and val_size == 0.0):
         test_df = df.copy()
         train_df = df.iloc[:0].copy()  # Empty dataframe with same columns
         val_df = df.iloc[:0].copy()     # Empty dataframe with same columns
     else:
         # First split: train vs (val + test)
+        # Make sure test_size is valid (< 1.0)
+        remaining_size = 1.0 - train_size
+        if remaining_size >= 1.0:
+            remaining_size = 0.99  # Cap at 0.99 to avoid sklearn error
+            
         train_df, temp_df = train_test_split(
             df, 
-            test_size=(1.0 - train_size),  # Everything except train
+            test_size=remaining_size,  # Everything except train
             random_state=random_state,
             stratify=df['label']  # Stratify by emotion to maintain distribution
         )
@@ -108,6 +113,9 @@ def create_splits(df, train_size=0.0, val_size=0.0, test_size=1.0, random_state=
         # Second split: validation vs test
         # Of the remaining data, split proportionally between val and test
         relative_test_size = test_size / (val_size + test_size)
+        if relative_test_size >= 1.0:
+            relative_test_size = 0.99  # Cap at 0.99 to avoid sklearn error
+            
         val_df, test_df = train_test_split(
             temp_df,
             test_size=relative_test_size,

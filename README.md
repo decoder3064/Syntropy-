@@ -1,5 +1,50 @@
 # Syntropy-
 
+## Dataset Split Configuration Guide
+
+**Important: Configurable splits apply to JOURNAL dataset only.**  
+GoEmotions uses its original pre-split files (train.tsv, dev.tsv, test.tsv).
+
+Both `create_datasets_deduplicated.py` and `create_datasets_journal.py` now support easy configuration for different training scenarios with the Journal dataset. Simply edit the configuration at the top of each file.
+
+### Quick Configuration
+
+At the top of each script, you'll find split percentage configurations (for Journal data only):
+
+```python
+# ZERO-SHOT: All journal data goes to test (for evaluation only)
+TRAIN_SIZE = 0.00
+VAL_SIZE = 0.00
+TEST_SIZE = 1.00
+
+# FEW-SHOT: Small training set for few-shot learning
+# TRAIN_SIZE = 0.05  # 5% for training
+# VAL_SIZE = 0.05    # 5% for validation
+# TEST_SIZE = 0.90   # 90% for testing
+
+# STANDARD: Typical ML split
+# TRAIN_SIZE = 0.70  # 70% for training
+# VAL_SIZE = 0.15    # 15% for validation
+# TEST_SIZE = 0.15   # 15% for testing
+```
+
+### How to Use
+
+1. **For Zero-Shot Testing**: Leave the default (0/0/100) - all journal data goes to test set
+2. **For Few-Shot Learning**: Uncomment the few-shot section and comment out zero-shot
+3. **For Full Training**: Uncomment the standard section and comment out others
+4. **For Custom Splits**: Uncomment custom section and set your own percentages (must sum to 1.0)
+
+### Important Notes
+
+- Percentages must sum to 1.0 (100%)
+- **GoEmotions keeps its original train/dev/test splits** (not affected by these settings)
+- **Journal dataset splits are configurable** for different experimental scenarios
+- For one-to-one label mapping (deduplicated), each text appears exactly once
+- Splits use stratification to maintain emotion distribution across sets
+- Changes apply to Journal dataset only
+
+---
 
 ### Outlining a sequence of steps required to go from the dataset to the sample tsv files. 
 

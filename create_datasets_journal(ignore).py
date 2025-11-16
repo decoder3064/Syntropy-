@@ -2,6 +2,36 @@ import pandas as pd
 import os
 from sklearn.model_selection import train_test_split
 
+# ============================================
+# SPLIT PERCENTAGES - EASY TO MODIFY
+# ============================================
+# Change these values to control train/validation/test splits
+# They should sum to 1.0 (100%)
+
+# ---- UNCOMMENT ONE OF THESE PRESETS OR SET CUSTOM VALUES ----
+
+# ZERO-SHOT: All data goes to test (for evaluation only)
+TRAIN_SIZE = 0.00
+VAL_SIZE = 0.00
+TEST_SIZE = 1.00
+
+# FEW-SHOT: Small training set for few-shot learning
+# TRAIN_SIZE = 0.05  # 5% for training
+# VAL_SIZE = 0.05    # 5% for validation
+# TEST_SIZE = 0.90   # 90% for testing
+
+# STANDARD: Typical ML split
+# TRAIN_SIZE = 0.70  # 70% for training
+# VAL_SIZE = 0.15    # 15% for validation
+# TEST_SIZE = 0.15   # 15% for testing
+
+# CUSTOM: Set your own percentages (must sum to 1.0)
+# TRAIN_SIZE = 0.10
+# VAL_SIZE = 0.10
+# TEST_SIZE = 0.80
+
+# ============================================
+
 # Journal emotions mapped to GoEmotions (overlapping emotions only)
 JOURNAL_TO_GOEMOTIONS = {
     'happy': 'joy',
@@ -82,17 +112,27 @@ def process_journal_dataset(input_csv_path):
     return result_df
 
 
-def create_splits(df, train_size=0.0, val_size=0.0, test_size=1.0, random_state=42):
+def create_splits(df, train_size=None, val_size=None, test_size=None, random_state=42):
     """
-    Create train/validation/test splits (default 0/0/100 for zero-shot evaluation)
+    Create train/validation/test splits
+    Uses global configuration values if not specified
     """
+    # Use global config if not specified
+    if train_size is None:
+        train_size = TRAIN_SIZE
+    if val_size is None:
+        val_size = VAL_SIZE
+    if test_size is None:
+        test_size = TEST_SIZE
     
     print("\n" + "=" * 70)
     print("CREATING TRAIN/VALIDATION/TEST SPLITS")
     print("=" * 70)
+    print(f"📊 Split configuration: {train_size*100:.0f}% train / {val_size*100:.0f}% val / {test_size*100:.0f}% test")
     
-    # For zero-shot (test_size=1.0), everything goes to test
+    # Handle zero-shot case (all data goes to test)
     if test_size >= 1.0 or (train_size == 0.0 and val_size == 0.0):
+        print("   🎯 Zero-shot mode: All data allocated to test set")
         test_df = df.copy()
         train_df = df.iloc[:0].copy()  # Empty dataframe with same columns
         val_df = df.iloc[:0].copy()     # Empty dataframe with same columns
@@ -111,44 +151,26 @@ def create_splits(df, train_size=0.0, val_size=0.0, test_size=1.0, random_state=
         )
         
         # Second split: validation vs test
-        # Of the remaining data, split proportionally between val and test
-        relative_test_size = test_size / (val_size + test_size)
-        if relative_test_size >= 1.0:
-            relative_test_size = 0.99  # Cap at 0.99 to avoid sklearn error
-            
-        val_df, test_df = train_test_split(
-            temp_df,
-            test_size=relative_test_size,
-            random_state=random_state,
-            stratify=temp_df['label']
-        )
-    
-    # Reset textid for each split
-    train_df = train_df.copy()
-    val_df = val_df.copy()
-    test_df = test_df.copy()
-    
-    train_df['textid'] = range(len(train_df))
-    val_df['textid'] = range(len(val_df))
-    test_df['textid'] = range(len(test_df))
-    
-    # Rename 'label' to 'target' for test set
-    test_df = test_df.rename(columns={'label': 'target'})
-    
-    print(f"\n📊 Split sizes:")
-    print(f"   Training:   {len(train_df):4,} ({len(train_df)/len(df)*100:.1f}%)")
-    print(f"   Validation: {len(val_df):4,} ({len(val_df)/len(df)*100:.1f}%)")
-    print(f"   Test:       {len(test_df):4,} ({len(test_df)/len(df)*100:.1f}%)")
-    print(f"   Total:      {len(df):4,}")
-    
-    # Show emotion distribution in each split
-    print("\n📋 Emotion distribution in TRAIN:")
-    train_dist = train_df['label'].value_counts()
-    for emotion, count in train_dist.items():
-        pct = (count / len(train_df)) * 100
-        print(f"   {emotion:15s}: {count:3,} ({pct:5.2f}%)")
-    
-    return train_df, val_df, test_df
+        if val_size == 0.0:
+            # No validation set, all temp goes to test
+            val_df = temp_df.iloc[:0].copy()
+            test_df = temp_df.copy()
+        elif test_size == 0.0:
+            # No test set, all temp goes to validation
+            test_df = temp_df.iloc[:0].copy()
+            val_df = temp_df.copy()
+        else:
+            # Of the remaining data, split proportionally between val and test
+            relative_test_size = test_size / (val_size + test_size)
+            if relative_test_size >= 1.0:
+                relative_test_size = 0.99  # Cap at 0.99 to avoid sklearn error
+                
+            val_df, test_df = train_test_split(
+                temp_df,
+                test_size=relative_test_size,
+                random_state=random_state,
+                stratify=temp_df['label']
+            )
 
 
 def main():

@@ -12,6 +12,39 @@ This avoids inflating the dataset with duplicate texts.
 # CONFIGURATION
 # ============================================
 
+# ============================================
+# SPLIT PERCENTAGES - EASY TO MODIFY (JOURNAL DATASET ONLY)
+# ============================================
+# NOTE: These splits only apply to the JOURNAL dataset.
+# GoEmotions uses its original pre-split files (train.tsv, dev.tsv, test.tsv)
+# 
+# Change these values to control train/validation/test splits for Journal
+# They should sum to 1.0 (100%)
+
+# ---- UNCOMMENT ONE OF THESE PRESETS OR SET CUSTOM VALUES ----
+
+# ZERO-SHOT: All journal data goes to test (for evaluation only)
+TRAIN_SIZE = 0.00
+VAL_SIZE = 0.00
+TEST_SIZE = 1.00
+
+# FEW-SHOT: Small training set for few-shot learning
+# TRAIN_SIZE = 0.05  # 5% for training
+# VAL_SIZE = 0.05    # 5% for validation
+# TEST_SIZE = 0.90   # 90% for testing
+
+# STANDARD: Typical ML split
+# TRAIN_SIZE = 0.70  # 70% for training
+# VAL_SIZE = 0.15    # 15% for validation
+# TEST_SIZE = 0.15   # 15% for testing
+
+# CUSTOM: Set your own percentages (must sum to 1.0)
+# TRAIN_SIZE = 0.10
+# VAL_SIZE = 0.10
+# TEST_SIZE = 0.80
+
+# ============================================
+
 # GoEmotions emotion mapping
 GOEMOTIONS_FULL_MAPPING = {
     0: 'admiration', 1: 'amusement', 2: 'anger', 3: 'annoyance',
@@ -189,30 +222,63 @@ def process_journal_deduplicated(input_csv_path):
     return result_df
 
 
-def create_splits(df, dataset_name, train_size=0.70, val_size=0.15, test_size=0.15, random_state=42):
+def create_splits(df, dataset_name, train_size=None, val_size=None, test_size=None, random_state=42):
     """
     Create train/validation/test splits
+    Uses global configuration values if not specified
     """
+    # Use global config if not specified
+    if train_size is None:
+        train_size = TRAIN_SIZE
+    if val_size is None:
+        val_size = VAL_SIZE
+    if test_size is None:
+        test_size = TEST_SIZE
+    
     print(f"\n{'='*70}")
     print(f"CREATING SPLITS FOR {dataset_name.upper()}")
     print(f"{'='*70}")
+    print(f"📊 Split configuration: {train_size*100:.0f}% train / {val_size*100:.0f}% val / {test_size*100:.0f}% test")
     
-    # First split: train vs (val + test)
-    train_df, temp_df = train_test_split(
-        df, 
-        test_size=(1.0 - train_size),
-        random_state=random_state,
-        stratify=df['label']
-    )
-    
-    # Second split: validation vs test
-    relative_test_size = test_size / (val_size + test_size)
-    val_df, test_df = train_test_split(
-        temp_df,
-        test_size=relative_test_size,
-        random_state=random_state,
-        stratify=temp_df['label']
-    )
+    # Handle zero-shot case (all data goes to test)
+    if test_size >= 1.0 or (train_size == 0.0 and val_size == 0.0):
+        print("   🎯 Zero-shot mode: All data allocated to test set")
+        test_df = df.copy()
+        train_df = df.iloc[:0].copy()  # Empty dataframe with same columns
+        val_df = df.iloc[:0].copy()     # Empty dataframe with same columns
+    else:
+        # First split: train vs (val + test)
+        remaining_size = 1.0 - train_size
+        if remaining_size >= 1.0:
+            remaining_size = 0.99  # Cap to avoid sklearn error
+            
+        train_df, temp_df = train_test_split(
+            df, 
+            test_size=remaining_size,
+            random_state=random_state,
+            stratify=df['label']
+        )
+        
+        # Second split: validation vs test
+        if val_size == 0.0:
+            # No validation set, all temp goes to test
+            val_df = temp_df.iloc[:0].copy()
+            test_df = temp_df.copy()
+        elif test_size == 0.0:
+            # No test set, all temp goes to validation
+            test_df = temp_df.iloc[:0].copy()
+            val_df = temp_df.copy()
+        else:
+            relative_test_size = test_size / (val_size + test_size)
+            if relative_test_size >= 1.0:
+                relative_test_size = 0.99  # Cap to avoid sklearn error
+                
+            val_df, test_df = train_test_split(
+                temp_df,
+                test_size=relative_test_size,
+                random_state=random_state,
+                stratify=temp_df['label']
+            )
     
     # Add textid AFTER splitting
     train_df = train_df.copy()
@@ -273,6 +339,8 @@ def main():
     print("\n" + "="*70)
     print("PROCESSING GOEMOTIONS DATASETS")
     print("="*70)
+    print("ℹ️  NOTE: GoEmotions uses its original pre-split files")
+    print("   (train.tsv, dev.tsv, test.tsv) - not affected by config above")
     
     train_go = process_goemotions_deduplicated(f'{goemotions_input_path}train.tsv', 'train')
     val_go = process_goemotions_deduplicated(f'{goemotions_input_path}dev.tsv', 'validation')
@@ -302,9 +370,14 @@ def main():
     # PROCESS JOURNAL
     # ============================================
     
+    print("\n" + "="*70)
+    print("PROCESSING JOURNAL DATASET")
+    print("="*70)
+    print(f"ℹ️  Using configured split: {TRAIN_SIZE*100:.0f}% train / {VAL_SIZE*100:.0f}% val / {TEST_SIZE*100:.0f}% test")
+    
     journal_df = process_journal_deduplicated(journal_input_path)
     
-    # Create splits
+    # Create splits (uses TRAIN_SIZE, VAL_SIZE, TEST_SIZE from config)
     train_j, val_j, test_j = create_splits(journal_df, 'journal')
     
     # Save Journal

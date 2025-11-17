@@ -24,9 +24,9 @@ This avoids inflating the dataset with duplicate texts.
 # ---- UNCOMMENT ONE OF THESE PRESETS OR SET CUSTOM VALUES ----
 
 # ZERO-SHOT: All journal data goes to test (for evaluation only)// train -> .5, .10, .20, .35
-TRAIN_SIZE = 0.10
+TRAIN_SIZE = 0.35
 VAL_SIZE = 0.00
-TEST_SIZE = 0.90
+TEST_SIZE = 0.65
 
 # FEW-SHOT: Small training set for few-shot learning
 # TRAIN_SIZE = 0.05  # 5% for training

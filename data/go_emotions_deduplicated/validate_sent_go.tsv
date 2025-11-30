@@ -88,7 +88,7 @@ textid	text	label	source
 86	His smile and optimism: gone.	neutral	goemotions
 87	Woot! Happy New Year!	joy	goemotions
 88	Or, drag an old pallet jack outside, empty. 	neutral	goemotions
-89	"color me embarrassed"" I wonder what colour he'd be if she showed that text exchange to his missus. "	surprise	goemotions
+89	"color me embarrassed"" I wonder what colour he'd be if she showed that text exchange to his missus. "	embarrassment	goemotions
 90	(4) Fufill sexual pleasures	neutral	goemotions
 91	I just need [NAME] to retire already so I can stop hating on him and appreciate all he's done... Even if it has caused me great suffering.	sadness	goemotions
 92	One of the most memorable games I’ve been to. And I got some great seats for an even better price.	joy	goemotions
@@ -114,7 +114,7 @@ textid	text	label	source
 112	Lethargy and depression both make me personally expect to not go through that later in life dilemma but kudos for finding the cure.	neutral	goemotions
 113	I watched a couple Titan games. He used [NAME] and [NAME] very well. That alone gets me excited.	excitement	goemotions
 114	I was thinking this too! People are so quick to jump on the beauty guru witch hunt	neutral	goemotions
-115	Did you just equate the tomahawk chant to lynching as a reply to being called out for virtue signaling?	neutral	goemotions
+115	Did you just equate the tomahawk chant to lynching as a reply to being called out for virtue signaling?	confusion	goemotions
 116	Being born in north america is a curse my friend. Oregon (my home) is kind of like Ireland weather wise though I hear.	sadness	goemotions
 117	Go to the bathroom	neutral	goemotions
 118	I had a monster panic attack myself--and also managed not to go clingy with it. I guess I should be proud, too!	pride	goemotions
@@ -136,7 +136,7 @@ textid	text	label	source
 134	Edited because my kneejerk response was kind of unnecessarily harsh. :/	anger	goemotions
 135	Cheers, I live minutes away from you, will check it out some time soon.	joy	goemotions
 136	[NAME] get better overtime. [NAME] would wreck [NAME].	neutral	goemotions
-137	Congrats, darling! That is a monumentally meaningful accomplishment. I'm both happy for and proud of you <3	excitement	goemotions
+137	Congrats, darling! That is a monumentally meaningful accomplishment. I'm both happy for and proud of you <3	pride	goemotions
 138	Okay, I see where you’re coming from. I guess I’m a RAW kind of guy so I tend to think that way.	neutral	goemotions
 139	Yep. I found out that a member of the school board is upset about something that happened with their own child, and wanted access revoked for teachers. 	neutral	goemotions
 140	I drove off 170 onto 40 and was surprised by the lack of brakelights.... keep it closed haha	surprise	goemotions
@@ -251,7 +251,7 @@ textid	text	label	source
 249	It does with PIA	neutral	goemotions
 250	Aren't they designed to not go straight if you don't hold the wheel? Something about making sure they don't go too far?	neutral	goemotions
 251	[NAME] just make one shot and we’ll be happy	joy	goemotions
-252	Worst in the country by far.	anger	goemotions
+252	Worst in the country by far.	disgust	goemotions
 253	Native deciduous tree species or gtfo!	neutral	goemotions
 254	That dress is made with industrial strength lycra/polyester and thread. I'm amazed it didn't blow up and kill innocent bystanders at the restaurant.	surprise	goemotions
 255	daaaaaamn girl!	anger	goemotions
@@ -286,7 +286,7 @@ textid	text	label	source
 284	I'd rather be bitter and angry than miserable.	neutral	goemotions
 285	If you are in the northern hemisphere, you must subscribe to the [NAME] “seasonal theory of lardons”.	neutral	goemotions
 286	"""Those [NAME] can't take an empty gesture."""	neutral	goemotions
-287	> What? I second this	anger	goemotions
+287	> What? I second this	surprise	goemotions
 288	I wanna die	sadness	goemotions
 289	It was magic.	neutral	goemotions
 290	can't wait to develop nutrient management plans for crop production!!!	excitement	goemotions
@@ -353,12 +353,12 @@ textid	text	label	source
 351	Yes, I am.	neutral	goemotions
 352	It's a strange decision that they scheduled this to conflict with the NFL playoffs in the United States.	confusion	goemotions
 353	If an AI projectile is your biggest problem you've got bigger issues, next. 	fear	goemotions
-354	I wonder if this will ever appear on BotW. Since it's so straightforward there probably isn't much to talk about.	confusion	goemotions
+354	I wonder if this will ever appear on BotW. Since it's so straightforward there probably isn't much to talk about.	surprise	goemotions
 355	Yeehaw! It's time for a hoedown!!!!	joy	goemotions
 356	This better be a fucking shitpost.	anger	goemotions
 357	That was a sucker punch.	neutral	goemotions
 358	This guy here	neutral	goemotions
-359	No. Why? Weird question. Unfortunately, the CCP would be suppressing me if I were. Better than ending up in a Xinjiang concentration camp though. 	sadness	goemotions
+359	No. Why? Weird question. Unfortunately, the CCP would be suppressing me if I were. Better than ending up in a Xinjiang concentration camp though. 	disgust	goemotions
 360	That's gonna take a fuckton of Eco products.	neutral	goemotions
 361	Is that what this is? I thought it was some kind of a tattoo gun.	confusion	goemotions
 362	Look at a calendar. Look at the 14th. Look at the week that contains the 14th. That week, any of the days on that week. 	neutral	goemotions
@@ -535,10 +535,10 @@ textid	text	label	source
 533	That's why I specified 'current attack.' I know it's gone on for ages.	neutral	goemotions
 534	A fucking power outage during a hurricane and your car is fucked.	anger	goemotions
 535	Oh I thought it was something that was actually contemplated. My bad	embarrassment	goemotions
-536	I knew this was stupid when the shittastic music came on.	anger	goemotions
+536	I knew this was stupid when the shittastic music came on.	disgust	goemotions
 537	Something new! Finally...	neutral	goemotions
 538	I’m gonna sit down and cry now	sadness	goemotions
-539	Let the liar lie, it's more fun to watch.	joy	goemotions
+539	Let the liar lie, it's more fun to watch.	excitement	goemotions
 540	If you can keep it from going out / someone putting you out, yes. 	neutral	goemotions
 541	And it’s being posted by a person who apparently has an MD, PhD, and MBA. One would hope they knew better	neutral	goemotions
 542	OMG. Indict this oligarch.	surprise	goemotions
@@ -719,7 +719,7 @@ textid	text	label	source
 717	Reminds me of when we used to have an RB named [NAME] while [NAME] was at Texas	joy	goemotions
 718	A girl bashed my then girlfriends head in with a cane, she didn't even get jail time. 	anger	goemotions
 719	Yes, a lot of it 	neutral	goemotions
-720	I heard [NAME] was an absolute monster too... Jk folks	disgust	goemotions
+720	I heard [NAME] was an absolute monster too... Jk folks	fear	goemotions
 721	You’re not being clear in what you’re trying to say. I’m unsure how to try to help you in this case.	confusion	goemotions
 722	Definitely not overreacting. Leave.	neutral	goemotions
 723	The fake news media and it's supporters are the enemy of the people.	anger	goemotions
@@ -999,7 +999,7 @@ textid	text	label	source
 997	See a lawyer, there's more trouble coming from your ex... She likes free money And a accountant...	neutral	goemotions
 998	Df1 masterrace. Noctis on 3 bar is bullshit though.	neutral	goemotions
 999	Can’t get hep or HIV from shitty politics.	neutral	goemotions
-1000	I DON'T KNOW. The loneliness goes from mental pain to physical discomfort and pain.	anger	goemotions
+1000	I DON'T KNOW. The loneliness goes from mental pain to physical discomfort and pain.	confusion	goemotions
 1001	They say nature makes man feel small, but I wasn't expecting this	neutral	goemotions
 1002	The sad result of far too many gamers needing addiction mechanics to continue playing one of the greatest card games of all time.	neutral	goemotions
 1003	Yeah I go to sleep hoping it's one of those days...	neutral	goemotions
@@ -1066,7 +1066,7 @@ textid	text	label	source
 1064	Rather than having to guess at which part you consider a strawman, maybe you could just quote it for me. I may not always recognise fallacies.	neutral	goemotions
 1065	Found an Instagram account	neutral	goemotions
 1066	No matter how loud I talk, no one seems to hear me... 	neutral	goemotions
-1067	Look at that thing...could tear you to shreds	neutral	goemotions
+1067	Look at that thing...could tear you to shreds	fear	goemotions
 1068	Should probably change the title to add that it is for medical only.	neutral	goemotions
 1069	My icebreaker is you do all the work.	neutral	goemotions
 1070	I believe he had just recently revived his learners permit and the kid ran a red light.	neutral	goemotions
@@ -1075,9 +1075,9 @@ textid	text	label	source
 1073	He rapes , but he creates	neutral	goemotions
 1074	Been to 54 countries at age 34. No debts, ever. Aiming for retirement in my early 40's. Life is good.	joy	goemotions
 1075	I need to present on how birds are not real. THEY ARE NOT REAL	neutral	goemotions
-1076	But it's especially tough when its state-owned oil. A lot of Scandinavian countries had hiccups.	sadness	goemotions
+1076	But it's especially tough when its state-owned oil. A lot of Scandinavian countries had hiccups.	fear	goemotions
 1077	Yikes. I feel sorry for the team that gives him anything above 5.5	sadness	goemotions
-1078	Happy cake day by the way!	joy	goemotions
+1078	Happy cake day by the way!	excitement	goemotions
 1079	Idk, looks more like [NAME] to me, the fact he goes straight in for the hug is what sells me	neutral	goemotions
 1080	Next you're gonna tell me they didn't invent iron! The fuck?	anger	goemotions
 1081	Looks like he deleted it. Can’t find it on his profile history	neutral	goemotions
@@ -1112,7 +1112,7 @@ textid	text	label	source
 1110	Currently cuddling the pillow because my husband got up...	neutral	goemotions
 1111	But this was a supposed psychopath attack, which can happen to anyone, not a rape attack that mostly happens to women	anger	goemotions
 1112	Write her a hand written letter and go back and deliver that to her damned door.	neutral	goemotions
-1113	REALITY BENDS TO MY WILL!	neutral	goemotions
+1113	REALITY BENDS TO MY WILL!	excitement	goemotions
 1114	Those are precisely communist ideas.	neutral	goemotions
 1115	Cheers! *clink*	joy	goemotions
 1116	Anyone else's NHL feed die?	neutral	goemotions
@@ -1208,7 +1208,7 @@ textid	text	label	source
 1206	Oh the irony in the title	surprise	goemotions
 1207	> go build something. BCH devs are already building and improving a decentralized network! You should start doing the same!	neutral	goemotions
 1208	I have all the names..	neutral	goemotions
-1209	I fear slowly losing myself, and my cognition over an illness far more than I fear dying from a random accident tbh. 	sadness	goemotions
+1209	I fear slowly losing myself, and my cognition over an illness far more than I fear dying from a random accident tbh. 	fear	goemotions
 1210	Get a card that says “Sorry about your loss” on the front, then on the inside write “It’s me. I quit”.	sadness	goemotions
 1211	#On a rainy day I dont accept any doordash requests unless there is a minimum of $5 bonus	neutral	goemotions
 1212	No but it should be	neutral	goemotions
@@ -1350,7 +1350,7 @@ textid	text	label	source
 1348	That’d what you think.	neutral	goemotions
 1349	The mindset that feminism has instilled them with: entitlement.	neutral	goemotions
 1350	Very frustrating. And totally the fault of your school’s systems for handling the issue. Sorry you have to deal with it.	sadness	goemotions
-1351	Happy birthday [NAME]!	joy	goemotions
+1351	Happy birthday [NAME]!	excitement	goemotions
 1352	Shades of Akira / Ghost in the Shell!	neutral	goemotions
 1353	Yet somehow that doesn't make death threats any less scary, because of the fear the 0.00001% of them will try to follow through on that threat.	fear	goemotions
 1354	If he wasn't diffusing the situation then why did he go in between the two groups?	confusion	goemotions
@@ -1408,13 +1408,13 @@ textid	text	label	source
 1406	Good news everyone!	excitement	goemotions
 1407	Hell yeah o/	excitement	goemotions
 1408	You're not going to get anywhere with these kids, mate. Reddit is being astroturfed.	neutral	goemotions
-1409	Being too scared of calling someone isn’t a disability for fuck sakes... use some common sense and grow up.	neutral	goemotions
+1409	Being too scared of calling someone isn’t a disability for fuck sakes... use some common sense and grow up.	anger	goemotions
 1410	It looks like someone else was deleted for answering, so I'm hesitant to now. 	neutral	goemotions
 1411	I kinda like the swirlies in the hair. But then I saw that her eyebrow is actually just the hair and hated it.	disgust	goemotions
 1412	The one who accidently paid 1 cent less couldn't have just given the other dumb bitch a penny? smdh	neutral	goemotions
 1413	This is what happens when you don’t beat up the nerd enough	neutral	goemotions
 1414	Man if you want some crazy dreams, slap on a few nicotine patches before bed.	neutral	goemotions
-1415	So you're saying there's a chance I'm a bot... I don't even know what's real anymore!	confusion	goemotions
+1415	So you're saying there's a chance I'm a bot... I don't even know what's real anymore!	surprise	goemotions
 1416	cultural norms is an interesting way of classifying the sort of people I see doing ~100% of littering in NYC.	neutral	goemotions
 1417	Meh, the Chiefs got gifted a PI call or two, especially on their last drive to tie the game.	neutral	goemotions
 1418	I'm always down for pimple popping pupper pictures!	excitement	goemotions
@@ -1482,7 +1482,7 @@ textid	text	label	source
 1480	I was scared for that white building.	fear	goemotions
 1481	[NAME] stop thinking too much and just do stuff like that	neutral	goemotions
 1482	You're welcome! :)	excitement	goemotions
-1483	That's the stuff of nightmares right there	fear	goemotions
+1483	That's the stuff of nightmares right there	nervousness	goemotions
 1484	They're basically our version of [NAME] and [NAME] at this point. Every video seems to involve a dumbass rant that misses the point of the topic.	neutral	goemotions
 1485	As a strip club connoisseur, this is one of my biggest fears. 	fear	goemotions
 1486	You're way too involved in this. Take a break from the internet.	neutral	goemotions
@@ -1593,7 +1593,7 @@ textid	text	label	source
 1591	[NAME] Edit: but certainly LP deflated there	neutral	goemotions
 1592	Deep blue eyes look weird to me. The rest seems pretty good.	fear	goemotions
 1593	that is the saddest damn yogurt ive ever seen	sadness	goemotions
-1594	I was told that upon waking up from a surgery, my first phrase was “don’t Terri [NAME] me” ☹️	neutral	goemotions
+1594	I was told that upon waking up from a surgery, my first phrase was “don’t Terri [NAME] me” ☹️	sadness	goemotions
 1595	He must hate you	anger	goemotions
 1596	This looks amazing omg!!	surprise	goemotions
 1597	FUCKKNG PLEASE 🙏🙏🙏	anger	goemotions
@@ -1659,7 +1659,7 @@ textid	text	label	source
 1657	Seems to be fake. Checked the Morning Mix website, no articles from Nov 13^(th) 2018 that match the title shown.	neutral	goemotions
 1658	"Every airliner is fully pressurized, even the hold. There's no ""partially pressurized"" aircraft. They don't necessarily heat the cargo area though"	neutral	goemotions
 1659	calm down there satan	neutral	goemotions
-1660	got a screenshot of the interaction!	neutral	goemotions
+1660	got a screenshot of the interaction!	excitement	goemotions
 1661	What a beautiful message - it's all about love, and I hope it sinks in to some of the COB people who might see it.	excitement	goemotions
 1662	Smell my cheese, you mother!!	neutral	goemotions
 1663	I assume you mean how men are guilty until proven innocent in rape cases and how many places refuse to accept women can commit rape	neutral	goemotions
@@ -1713,7 +1713,7 @@ textid	text	label	source
 1711	They were criticizing your spelling.	neutral	goemotions
 1712	"...starts Jan 1. ""Published Jan 2"" Way to hit that breaking news."	neutral	goemotions
 1713	Oh. You’re one of.... ^*those.*	neutral	goemotions
-1714	What is scary?	surprise	goemotions
+1714	What is scary?	fear	goemotions
 1715	Literally a post on reddit by a woman being creepily hit on by a neighbor, with his wife's permission. Today.	neutral	goemotions
 1716	I tried. [NAME] responded by taking the baby to see her without me, while I was at work. 😤	neutral	goemotions
 1717	Shocking that a fat DnD kid is this self-important. Remarkable.	surprise	goemotions
@@ -1852,7 +1852,7 @@ textid	text	label	source
 1850	I’m just doing it ironically to own the libs! /s	neutral	goemotions
 1851	Be prepared for a child support order. But my dad just decided he didn't want to pay any more and the CSEA was ok with that.	neutral	goemotions
 1852	I am just utterly disgusted by it all	disgust	goemotions
-1853	Degloved finger...*ouch*. One of the worst types of avulsions.	sadness	goemotions
+1853	Degloved finger...*ouch*. One of the worst types of avulsions.	disgust	goemotions
 1854	I apologise for coming off as rude, the end comment was unnecessary and needlessly rude	anger	goemotions
 1855	Boy it sure is a hot one today, huh?	confusion	goemotions
 1856	27 too many	neutral	goemotions
@@ -1918,7 +1918,7 @@ textid	text	label	source
 1916	Whatever you do, don’t try to use a bone to get it out. It’ll only make it worse.	neutral	goemotions
 1917	When bear attacks kick him I'm the ball!	neutral	goemotions
 1918	When I get a brain freeze, I grab my chest and throat. Very painful. Then i keep eating. 	nervousness	goemotions
-1919	Bless this woman. That honestly sounds horrific from every end. I hope her ex [NAME] has lived a horrendous life since perpetuating that disgusting act.	disgust	goemotions
+1919	Bless this woman. That honestly sounds horrific from every end. I hope her ex [NAME] has lived a horrendous life since perpetuating that disgusting act.	fear	goemotions
 1920	errrrrrrrrr that's pointless, and your Doctor I'm afraid is pointless as well.	fear	goemotions
 1921	Sorry to hear that, I have it for ps4 and hardcore dlc servers are still up	sadness	goemotions
 1922	Like have an anti interventionist foreign policy.	neutral	goemotions
@@ -1953,7 +1953,7 @@ textid	text	label	source
 1951	Here's an excerpt from Australian law that seeks to define hate	neutral	goemotions
 1952	Maybe you should smoke some and relax.	neutral	goemotions
 1953	Certain mental health issues can be smelled on a person; by all accounts, schizophrenia makes a person's sweat smell like goat	neutral	goemotions
-1954	Dumb people. Poor person. The wolf was the only one who wanted to help!	neutral	goemotions
+1954	Dumb people. Poor person. The wolf was the only one who wanted to help!	anger	goemotions
 1955	"But ""questioning"" overwhelming evidence presented with a comprehensive explanation without any sort of counterargument is perhaps better called *denying*."	neutral	goemotions
 1956	I’m battling depression and anxiety and having a healthy diet and loosing weight has helped me	sadness	goemotions
 1957	Oh my god. You *actually* asked reddit first? Fucking hell.	neutral	goemotions
@@ -1973,7 +1973,7 @@ textid	text	label	source
 1971	well, they never said anything about curing her...	neutral	goemotions
 1972	[NAME]?! Welcome to the show!!!	excitement	goemotions
 1973	Lmao bro.	neutral	goemotions
-1974	Wow. She didn't get it at all. Very entitled parent	surprise	goemotions
+1974	Wow. She didn't get it at all. Very entitled parent	excitement	goemotions
 1975	[NAME], [NAME] and [NAME] looks like... He ain't natty	neutral	goemotions
 1976	> It's almost like people are people I've been saying this a lot lately.	neutral	goemotions
 1977	Anzac day rules are even dumber	neutral	goemotions
@@ -2153,7 +2153,7 @@ textid	text	label	source
 2151	Hell yeah frick that promiscuous girl	neutral	goemotions
 2152	Haha, well it sounds like its done too good of a job!	joy	goemotions
 2153	[NAME] MAY be a slightly better hitter, but he can't field for crap. And the other two can't hold a candle to [NAME]	neutral	goemotions
-2154	Shitpost from the uncultured	anger	goemotions
+2154	Shitpost from the uncultured	disgust	goemotions
 2155	Lmao, they are gonna have field day 	neutral	goemotions
 2156	Exactly why my money goes to more guns and ammo.	neutral	goemotions
 2157	I'm all for strong lady friendships.	neutral	goemotions
@@ -2162,7 +2162,7 @@ textid	text	label	source
 2160	Nope, if i remember correctly it was a modded gibson les paul, i'm not a guitar player though	neutral	goemotions
 2161	Exit scam. Check out their cold wallets, holy shit.	anger	goemotions
 2162	Sweet sweet air con. Apparently it’s going to be a hot one today.	neutral	goemotions
-2163	Now we play the waiting game.	neutral	goemotions
+2163	Now we play the waiting game.	joy	goemotions
 2164	Well she’s still kind of awful but she’s hilarious. Definitely a huge improvement. I could barely watch her!!	disgust	goemotions
 2165	[NAME] was nowhere near them, he was by the Falcon. 	neutral	goemotions
 2166	When in the past 4 decades has anything changed due to a march?	neutral	goemotions
@@ -2260,7 +2260,7 @@ textid	text	label	source
 2258	Really wanted him on the Mets. But, its gonna be fun watching [NAME] try to catch [NAME] slider. 	neutral	goemotions
 2259	I have mixed states and rapid cycling too! Super fun	excitement	goemotions
 2260	This sub has over 350k subscribers. How are there this many of us who enjoy this torture.	joy	goemotions
-2261	My mom used to throw tantrums in public. I wanted to crawl into a hole and die when she'd start.	sadness	goemotions
+2261	My mom used to throw tantrums in public. I wanted to crawl into a hole and die when she'd start.	embarrassment	goemotions
 2262	She's not pointing at you. Look closer.	neutral	goemotions
 2263	That would be sick!	neutral	goemotions
 2264	It's because you're dizzy from lack of oxygen.	neutral	goemotions
@@ -2392,7 +2392,7 @@ textid	text	label	source
 2390	Anthem is a good 45 min from Scottsdale and the rush hour traffic is a nightmare.	fear	goemotions
 2391	What does all that pill shit they talk about mean anyways? Like what the fuck is a black pill and a red pill?	confusion	goemotions
 2392	I know right! Now I’ll never even know how far the distance was	confusion	goemotions
-2393	Not sure about OP, but caffeine tends to make many people more anxious (especially those with a co-morbid anxiety disorder(s)).	neutral	goemotions
+2393	Not sure about OP, but caffeine tends to make many people more anxious (especially those with a co-morbid anxiety disorder(s)).	nervousness	goemotions
 2394	Between this and the headline it makes me wonder how he fits his ego through most doorways.	surprise	goemotions
 2395	Lincoln Riley had no HC experience and only 2 years of P5 OC experience.	neutral	goemotions
 2396	Benzos stop working after a few weeks because they’re very addictive and tolerance grows quickly. I use them occasionally but never more than twice a week.	neutral	goemotions
@@ -2432,7 +2432,7 @@ textid	text	label	source
 2430	[NAME] already setting records for most nicknames in the league. There is no way to stop this kid...	neutral	goemotions
 2431	Please pass this. We will finally get the same thing we have in California before scotus.	neutral	goemotions
 2432	I hear she eats babies on Sundays. (The rest of the week she goes easy and just punches puppies)	disgust	goemotions
-2433	Half the cars I see in Florida seem to be allowed to drive at night without any lights. I don't get how they get away with it.	neutral	goemotions
+2433	Half the cars I see in Florida seem to be allowed to drive at night without any lights. I don't get how they get away with it.	confusion	goemotions
 2434	Newcomers have never heard of the flippening ever since :( that’s sad	neutral	goemotions
 2435	So 10 bucks says shes just gonna leave him after this anyway	neutral	goemotions
 2436	if you ever played hardcore in previous titles with no doritos you would know that this in fact not the case	neutral	goemotions
@@ -2563,7 +2563,7 @@ textid	text	label	source
 2561	Mexico definitely had a lot of potential for prosperity, but then all the mess starting in the 1910s leading to the PRI really squelched all that...	neutral	goemotions
 2562	Cause boomers know young people like it and want to generate revenue	neutral	goemotions
 2563	Bop employee here. Not GLAD	neutral	goemotions
-2564	I'd be worried about the tone, not the content.	fear	goemotions
+2564	I'd be worried about the tone, not the content.	nervousness	goemotions
 2565	FYI that ‘[NAME] quote’ is not only false but also not an [NAME] quote.	neutral	goemotions
 2566	[NAME] 😂 I’m sorry they weren’t as expected but thank you for sharing! I had a good giggle.	neutral	goemotions
 2567	All children should be given the option to learn about how to effectively use the rights they’re entitled to.	neutral	goemotions
@@ -2610,10 +2610,10 @@ textid	text	label	source
 2608	I would enjoy Kreate a Kharacter. But it'll need a lot of help. They shouldn't let you put cubes and stuff everywhere like in SC6.	joy	goemotions
 2609	Change of top, pump, inner tubes, puncture repair kit & tyre levers, balaclava, lube. 	neutral	goemotions
 2610	There isn't. It only exists in the heads of those who subscribe to these tinfoil theories.	neutral	goemotions
-2611	Is a valid, unsound argument logical?	neutral	goemotions
+2611	Is a valid, unsound argument logical?	confusion	goemotions
 2612	He should be banned from the nfl. I can’t get behind this.	anger	goemotions
 2613	Confusingly, they also want less rights for [NAME].	confusion	goemotions
-2614	The sun in his eyes makes him look pissed, like he and the ducks had some personal history.	neutral	goemotions
+2614	The sun in his eyes makes him look pissed, like he and the ducks had some personal history.	anger	goemotions
 2615	Disgusting, I bet you he will never even be inside that apartment condo ever.	disgust	goemotions
 2616	Don’t shove your “self control” in my face	neutral	goemotions
 2617	Maybe ask some neighbours if there have been any strange or noteworthy comings and goings during the day.	neutral	goemotions
@@ -2653,7 +2653,7 @@ textid	text	label	source
 2651	That explains it. Who was it?	neutral	goemotions
 2652	Get Flonase. This thing work for me.	neutral	goemotions
 2653	No matter what, we can all listen to *You Shook Me All Night Long* during earthquakes. 	neutral	goemotions
-2654	That host's sense of superiority and childish sarcasm is so terrible that it physically hurts.	disgust	goemotions
+2654	That host's sense of superiority and childish sarcasm is so terrible that it physically hurts.	fear	goemotions
 2655	User name says you are a scumbag [NAME]. I’m confused	confusion	goemotions
 2656	oh man clicking 2 buttons before you read an article, the absolute horror	fear	goemotions
 2657	Why don’t you just *get the fuck out* of Edmonton if you hate it so much?	anger	goemotions
@@ -2671,7 +2671,7 @@ textid	text	label	source
 2669	Ohhhhh come on [NAME], just two more years...	neutral	goemotions
 2670	WHAT THE HELL?!?!?!?	anger	goemotions
 2671	Good to know everything is about average there. Leave it to H-Town to hold it down.	joy	goemotions
-2672	"Yeah seriously! I saw the controller and I thought ""don't do it, don't do it!"""	neutral	goemotions
+2672	"Yeah seriously! I saw the controller and I thought ""don't do it, don't do it!"""	fear	goemotions
 2673	You can’t say that that’s racist!!!!!!	neutral	goemotions
 2674	SWOOOSH!!	neutral	goemotions
 2675	Apparently the system is down	neutral	goemotions
@@ -2738,8 +2738,8 @@ textid	text	label	source
 2736	EZ CLAP This is for kids, try doing this:	neutral	goemotions
 2737	"That sounds awful )-: I'm so grateful that my parents and therapist want to let me figure this out with minimal ""supervision"""	sadness	goemotions
 2738	Sadly you are correct.	sadness	goemotions
-2739	beating up tire man	neutral	goemotions
-2740	Didn't one of those two idiots void their visa to the US over some political bullshit? I think it was [NAME], can't remember.	neutral	goemotions
+2739	beating up tire man	anger	goemotions
+2740	Didn't one of those two idiots void their visa to the US over some political bullshit? I think it was [NAME], can't remember.	confusion	goemotions
 2741	Yes he is. Cling to your safety blanket for now cause momma [NAME] is about to snatch it from you.	neutral	goemotions
 2742	It’s saved in the cloud now lol	neutral	goemotions
 2743	[NAME] oh wait, this aint Instagram 	neutral	goemotions
@@ -2788,7 +2788,7 @@ textid	text	label	source
 2786	Apparently America is 400 years old according to him as well.	neutral	goemotions
 2787	Don't be mad, life is too short!	neutral	goemotions
 2788	Yeah, maybe if they add [NAME] and [NAME]...	neutral	goemotions
-2789	"see, i'm over here thinking ""i hate sports"" now if you could just take my balls and go home"	neutral	goemotions
+2789	"see, i'm over here thinking ""i hate sports"" now if you could just take my balls and go home"	anger	goemotions
 2790	Okay, a little confusion. Why are those “d”s not cancelling out? Edit :skittle-a little	neutral	goemotions
 2791	Imagine buying a product, then burning it in protest 	neutral	goemotions
 2792	It’s a disgusting mix of mayonnaise, ketchup, and pickle relish.	disgust	goemotions
@@ -2796,7 +2796,7 @@ textid	text	label	source
 2794	You're trying too hard	neutral	goemotions
 2795	We shot like 35 free throws, bud, we would've won by 16 if we made them all	neutral	goemotions
 2796	Wow, what a find. The store actually began clapping	surprise	goemotions
-2797	Maybe he was just really tanned and needs a vacation	neutral	goemotions
+2797	Maybe he was just really tanned and needs a vacation	confusion	goemotions
 2798	Only fair - although they they could have reported it as 0-0 since ND never showed up.	neutral	goemotions
 2799	BUT THEYRE TIRED	neutral	goemotions
 2800	I can't believe this team beat Winnipeg last week, handily too. That effort hasn't been there since. 	surprise	goemotions

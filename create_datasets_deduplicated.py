@@ -24,9 +24,9 @@ This avoids inflating the dataset with duplicate texts.
 # ---- UNCOMMENT ONE OF THESE PRESETS OR SET CUSTOM VALUES ----
 
 # ZERO-SHOT: All journal data goes to test (for evaluation only)// train -> .5, .10, .20, .35
-TRAIN_SIZE = 0.35
+TRAIN_SIZE = 0.00 
 VAL_SIZE = 0.00
-TEST_SIZE = 0.65
+TEST_SIZE = 1.00
 
 # FEW-SHOT: Small training set for few-shot learning
 # TRAIN_SIZE = 0.05  # 5% for training
@@ -95,18 +95,20 @@ JOURNAL_COLUMN_MAPPING = {
 
 def process_goemotions_deduplicated(input_tsv_path, split_name):
     """
-    Process GoEmotions TSV: For multi-label examples, randomly pick ONE emotion.
+    Process GoEmotions TSV: For multi-label examples, pick the emotion that balances the dataset.
     Each text appears only ONCE in the output.
+    Strategy: Select the least frequent emotion from available labels to balance distribution.
     """
     print(f"\n{'='*70}")
-    print(f"PROCESSING GOEMOTIONS {split_name.upper()} - DEDUPLICATED")
+    print(f"PROCESSING GOEMOTIONS {split_name.upper()} - DEDUPLICATED (BALANCED)")
     print(f"{'='*70}")
     
     # Read TSV
     df = pd.read_csv(input_tsv_path, sep='\t', header=None, 
                      names=['text', 'emotion_ids', 'example_id'])
     
-
+    # Track emotion counts for balancing
+    emotion_counts = {emotion: 0 for emotion in OVERLAPPING_EMOTIONS}
     
     output_rows = []
     
@@ -125,12 +127,12 @@ def process_goemotions_deduplicated(input_tsv_path, split_name):
                 if emotion_name in OVERLAPPING_EMOTIONS:
                     overlapping_emotion_names.append(emotion_name)
             
-            # If there are overlapping emotions, randomly pick ONE
+            # If there are overlapping emotions, pick the LEAST frequent one
             if overlapping_emotion_names:
-                # Use index as random seed for reproducibility
-                chosen_emotion = pd.Series(overlapping_emotion_names).sample(
-                    n=1, random_state=idx
-                ).values[0]
+                # Select emotion with minimum count (for balancing)
+                chosen_emotion = min(overlapping_emotion_names, 
+                                   key=lambda e: emotion_counts[e])
+                emotion_counts[chosen_emotion] += 1
                 
                 output_rows.append({
                     'text': text,
@@ -163,16 +165,20 @@ def process_goemotions_deduplicated(input_tsv_path, split_name):
 
 def process_journal_deduplicated(input_csv_path):
     """
-    Process Journal CSV: For multi-label entries, randomly pick ONE emotion.
+    Process Journal CSV: For multi-label entries, pick the emotion that balances the dataset.
     Each text appears only ONCE in the output.
+    Strategy: Select the least frequent emotion from available labels to balance distribution.
     """
     print(f"\n{'='*70}")
-    print("PROCESSING JOURNAL DATASET - DEDUPLICATED")
+    print("PROCESSING JOURNAL DATASET - DEDUPLICATED (BALANCED)")
     print(f"{'='*70}")
     
     # Read CSV
     df = pd.read_csv(input_csv_path)
     print(f"\n📂 Loaded {len(df)} journal entries")
+    
+    # Track emotion counts for balancing
+    emotion_counts = {emotion: 0 for emotion in OVERLAPPING_EMOTIONS}
     
     output_rows = []
     
@@ -186,12 +192,12 @@ def process_journal_deduplicated(input_csv_path):
                 goemotions_emotion = JOURNAL_TO_GOEMOTIONS[journal_emotion]
                 true_emotions.append(goemotions_emotion)
         
-        # If there are emotions, randomly pick ONE
+        # If there are emotions, pick the LEAST frequent one
         if true_emotions:
-            # Use index as random seed for reproducibility
-            chosen_emotion = pd.Series(true_emotions).sample(
-                n=1, random_state=idx
-            ).values[0]
+            # Select emotion with minimum count (for balancing)
+            chosen_emotion = min(true_emotions, 
+                               key=lambda e: emotion_counts[e])
+            emotion_counts[chosen_emotion] += 1
             
             output_rows.append({
                 'text': text,

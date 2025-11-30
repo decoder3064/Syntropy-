@@ -5,10 +5,10 @@ textid	text	target	source
 3	Girlfriend weak as well, that jump was pathetic.	sadness	goemotions
 4	I've also heard that intriguing but also kinda scary	fear	goemotions
 5	The thought of shooting anything at asylum seekers is appalling.	fear	goemotions
-6	if the pain doesn't go away after 4 hours or so, it's broke.	sadness	goemotions
+6	if the pain doesn't go away after 4 hours or so, it's broke.	neutral	goemotions
 7	After he left the bus, the two harpies sat next to each other and discussed why they were unable to find a decent man.	neutral	goemotions
 8	Well, there's cubs and otters too.	neutral	goemotions
-9	Watch Vegan Gains’ video on that, he had it when he was like 13, highly doubt he was juicing then	neutral	goemotions
+9	Watch Vegan Gains’ video on that, he had it when he was like 13, highly doubt he was juicing then	confusion	goemotions
 10	Again, overall, not just for me. 	neutral	goemotions
 11	Possibly, but not if it actually succedes	neutral	goemotions
 12	Same here but it seems like that will make it more rewarding to actually build a base with gardens and stuff.	neutral	goemotions
@@ -22,7 +22,7 @@ textid	text	target	source
 20	I like to bring up the fact that all of these pyramid schemes have corporate offices that have the exact same structure they are railing against.	neutral	goemotions
 21	I think the fan base is mostly past that at this point. Almost everyone has MASSIVE problems with some of the decisions Nintendo makes.	neutral	goemotions
 22	so wont back up your words? thats how i thought this would go.justifies *everything* I HAVE SAID.	neutral	goemotions
-23	A surprise turn of events! I'm so glad you heard such great things about yourself!	surprise	goemotions
+23	A surprise turn of events! I'm so glad you heard such great things about yourself!	joy	goemotions
 24	Despite having lived here for 10 years, i've never been to portillos, and given this, it's somewhat unlikely i start going now...	neutral	goemotions
 25	You take that back right now! [NAME] does not deserve this.	neutral	goemotions
 26	They started seeling alcohol a while ago, when she called her mafia friend to get help for the speakeasy.	neutral	goemotions
@@ -48,7 +48,7 @@ textid	text	target	source
 46	I thought this allegation was squashed when it came out. I was surprised to see it still making headlines. Poor guy.	surprise	goemotions
 47	BOOM BOOM BOOM (not Bitton related)	neutral	goemotions
 48	Because of this bad situation some people are afraid of becoming youtubers because of this	fear	goemotions
-49	That’s how you know they’re happy.	neutral	goemotions
+49	That’s how you know they’re happy.	excitement	goemotions
 50	Incoming 20m a year contract [NAME] !!!	neutral	goemotions
 51	Wouldn't wipe my arse with it.	neutral	goemotions
 52	Not sure how anyone whos been paying attention could	confusion	goemotions
@@ -163,7 +163,7 @@ textid	text	target	source
 161	[NAME] YOU SLIME	neutral	goemotions
 162	You don't have to watch it if you don't want to. Nobody is holding a gun to your head.	neutral	goemotions
 163	I ate my mommy and daddy	neutral	goemotions
-164	This is scary and so very sad. Eleven??? A baby! I was still building forts. I weep for this child.	fear	goemotions
+164	This is scary and so very sad. Eleven??? A baby! I was still building forts. I weep for this child.	sadness	goemotions
 165	Holy no punctuation, [NAME]! 	neutral	goemotions
 166	MeToo is about sharing personal stories of sexual assault. Reframing it as accusation based, and as furthering a kidnap, is fucking disgusting.	disgust	goemotions
 167	Yeah cuz it's not like eggs ever roll over or anything. /s	neutral	goemotions
@@ -205,7 +205,7 @@ textid	text	target	source
 203	100 chapters of relationship + 50 of build up after [NAME] left [NAME]. Damn you Sasuga T.T	neutral	goemotions
 204	Have you tried having wealthy parents?	neutral	goemotions
 205	At that point [NAME] was no longer a virgin! No seriously, ask [NAME]! 	neutral	goemotions
-206	I'm so doing this!	neutral	goemotions
+206	I'm so doing this!	excitement	goemotions
 207	Losing my identity, wondering have I gone insane...	sadness	goemotions
 208	[NAME].	neutral	goemotions
 209	Because in some cases parents are basically having their own children kidnapped and held against their will and forced into these programs. This is child abuse.	disgust	goemotions
@@ -417,7 +417,7 @@ textid	text	target	source
 415	Well [NAME] made me laugh	joy	goemotions
 416	I swear to [NAME], I'm going to approach you. Instead of running away, I'll come right to you.	neutral	goemotions
 417	I always give my disclaimer when he asks for my phone number. I understand and respect my situation could be a deal breaker for some.	neutral	goemotions
-418	[NAME] funny, girl.. not so much 	neutral	goemotions
+418	[NAME] funny, girl.. not so much 	joy	goemotions
 419	My coworker got cheated on by her boyfriend of 8 years and needs a night out so I can't even get out of it sigh.	neutral	goemotions
 420	The DPRK is ethno fascism	neutral	goemotions
 421	Da real MVP	neutral	goemotions
@@ -527,7 +527,7 @@ textid	text	target	source
 525	You always choose mum bro. What are you thinking	neutral	goemotions
 526	We need [NAME] to take a 7 year deal or less. I can picture the Dodgers giving [NAME] 7 years	neutral	goemotions
 527	Brilliant! I have absolutely no idea what's going on.	confusion	goemotions
-528	Cheers for the reply ;)	joy	goemotions
+528	Cheers for the reply ;)	excitement	goemotions
 529	you really think the walls gonna cost 5 billion?	neutral	goemotions
 530	None, I know nobody or have anyone nearby who can help.	sadness	goemotions
 531	[NAME]. Go on Chapo.	neutral	goemotions
@@ -603,14 +603,14 @@ textid	text	target	source
 601	Now go to Gulag!!!!	neutral	goemotions
 602	This post made me smile, cute doggo 	joy	goemotions
 603	those comments are perplexing	neutral	goemotions
-604	Girls screaming alone gives me horrible flashbacks	disgust	goemotions
+604	Girls screaming alone gives me horrible flashbacks	nervousness	goemotions
 605	"Because they claim to be against [NAME], and they need something called ""votes"" to beat him?"	neutral	goemotions
 606	[NAME].	neutral	goemotions
 607	Parliament won't let a hard brexit go through, there are far too few MPs who would accept it.	neutral	goemotions
 608	Wow... I’m so glad that my dog is lazy like me.	joy	goemotions
 609	This really tickled my anxiety. I hate it	anger	goemotions
 610	Peak Ancap	neutral	goemotions
-611	That may be — we are talking about the stock market, though. :)	neutral	goemotions
+611	That may be — we are talking about the stock market, though. :)	joy	goemotions
 612	Trade up for Haskins. If that doesn't happen give me Greedy.	neutral	goemotions
 613	Themmuns have everywhere infiltrated so they do !	neutral	goemotions
 614	From an Instagram post about the judge critiquing [NAME] look	neutral	goemotions
@@ -618,7 +618,7 @@ textid	text	target	source
 616	This caught me off guard for real. I actually off my bed laughing. +1	surprise	goemotions
 617	cause he constantly hates on [NAME] for no reason other than Petry having the puck on his stick more than anyone else on the team	disgust	goemotions
 618	Should be Colt Wesley Small Johnson	neutral	goemotions
-619	Oh [NAME]!	neutral	goemotions
+619	Oh [NAME]!	excitement	goemotions
 620	Don’t I know it! I can’t believe this breading station thing is so enormous.	surprise	goemotions
 621	That whole chart looks like something someone made up to post on incels.	neutral	goemotions
 622	r/patrig Edit: looks like someone already cross posted it there. That was fast.	neutral	goemotions
@@ -648,7 +648,7 @@ textid	text	target	source
 646	And no fall damage	neutral	goemotions
 647	Why is this still not banned	anger	goemotions
 648	Yep i always say this. Absolutely best case scenario is a foul ball. If he puts it in play it's probably a dribbler.	neutral	goemotions
-649	Can’t believe a club paid $550k for Sandow that’s absurd.	neutral	goemotions
+649	Can’t believe a club paid $550k for Sandow that’s absurd.	surprise	goemotions
 650	By not using Facebook as a barometer of success. Look at Facebook as a highlight reel and not what people are actually living,	neutral	goemotions
 651	Wiggins midrange magic!	neutral	goemotions
 652	Not from but I lived there for 12 years until very recently	neutral	goemotions
@@ -712,7 +712,7 @@ textid	text	target	source
 710	They’re both in Austin..I don’t see [NAME] being someone to hang out with [NAME] more than the other way around.	neutral	goemotions
 711	She is :(	neutral	goemotions
 712	Legit I just go to places and tell them to surprise me. That way I get to keep trying new types of food 🥘	excitement	goemotions
-713	Maybe she was attempting to be ironic? I dunno, man, people are just an enigma.	neutral	goemotions
+713	Maybe she was attempting to be ironic? I dunno, man, people are just an enigma.	confusion	goemotions
 714	Im hoping for a relapse too. I like her better, her hair gets darker, her leather jacket comes out. I miss private practice [NAME]	sadness	goemotions
 715	No one drinks Old Style	neutral	goemotions
 716	No like its legit cgi Edit: this comment has some value the entire thread has things to pick apart in it	neutral	goemotions
@@ -737,7 +737,7 @@ textid	text	target	source
 735	You know that mista mista lady? I think I just killed her. - [NAME]	neutral	goemotions
 736	They will be more than happy to hand you the matches, followed by the cuffs. 	neutral	goemotions
 737	It is genuinely hard to imagine what the Magic basketball experience will be like when these two legends are no longer in their roles.	sadness	goemotions
-738	It’s not unlikely that his family was already imprisoned or dead, which gave him the window to run. 	neutral	goemotions
+738	It’s not unlikely that his family was already imprisoned or dead, which gave him the window to run. 	sadness	goemotions
 739	would be US Biggest error ever	neutral	goemotions
 740	Shouldn't be getting downvoted that's exactly what I thought the motive was	neutral	goemotions
 741	“An eye for an eye” Proceeds to take 2 things away from killers	neutral	goemotions
@@ -819,7 +819,7 @@ textid	text	target	source
 817	This is exactly what it's been like. I feel personally victimised by it all	sadness	goemotions
 818	Enjoy it! You have a good one for your first!	joy	goemotions
 819	damn that kid can jump	excitement	goemotions
-820	Yow thats gnarly.	surprise	goemotions
+820	Yow thats gnarly.	fear	goemotions
 821	Trade [NAME] and see if he plays [NAME] over [NAME]. let's see what kinda coach we're dealing with here.	neutral	goemotions
 822	He’s had nightmares ever since the storm	neutral	goemotions
 823	shockingly close to reality.	surprise	goemotions
@@ -845,7 +845,7 @@ textid	text	target	source
 843	He doesn't actually run a 4.49. It's a little deceiving because he's pretty sneaky, so I can understand you being confused.	confusion	goemotions
 844	Please enlighten us	neutral	goemotions
 845	I have already played with one friend, and we get along. But there was another guy i haven't played with before.	neutral	goemotions
-846	As someone who has polluted their body with copious amounts of sugar, I somewhat doubt steroids are any worse. Abuse anything and it will hurt you.	anger	goemotions
+846	As someone who has polluted their body with copious amounts of sugar, I somewhat doubt steroids are any worse. Abuse anything and it will hurt you.	disgust	goemotions
 847	. I’m a dude so I took sleeping medication and meditation alike, not respect/reverence for one day dammit.	neutral	goemotions
 848	I really like this ring so I’m glad to hear that.	joy	goemotions
 849	I'm just really sad all that cake was wasted.	sadness	goemotions
@@ -896,7 +896,7 @@ textid	text	target	source
 894	[NAME] have a solid minute lol. [NAME] can’t sit at all tonight	neutral	goemotions
 895	We’re used to crazy cold weather but this is much worse, a lot of people are just staying inside till Thursday.	disgust	goemotions
 896	ironic/profoundly tragic. tomato/to-mah-to	neutral	goemotions
-897	Personally really enjoyed it. Have it in my top 3 AC games with AC2 and Black Flag in there too.	joy	goemotions
+897	Personally really enjoyed it. Have it in my top 3 AC games with AC2 and Black Flag in there too.	excitement	goemotions
 898	Your friend must have had a horrible time writing papers if adjectives like that were off limits	neutral	goemotions
 899	That's quite a lot worse tbh	disgust	goemotions
 900	Sad, but American	sadness	goemotions
@@ -906,7 +906,7 @@ textid	text	target	source
 904	Yep. In Sixth grade a boy named [NAME] just stabbed me in the stomach with a pencil.	neutral	goemotions
 905	Personally though I like to think of myself as a normy or a snowflake just without negative correlation. C;	neutral	goemotions
 906	The bitch doesnt need drag race (bc shes amazing) but im still sad.	anger	goemotions
-907	I don't think either of them took that bump outside any worse than the other. That was jarring.	disgust	goemotions
+907	I don't think either of them took that bump outside any worse than the other. That was jarring.	surprise	goemotions
 908	some people just want attention..lol	neutral	goemotions
 909	i'll take 2	neutral	goemotions
 910	BUT SHE WENT TO A HISTORICALLY BLACK COLLEGE AND IS PART OF A BLACK GREEK SORORITY!	neutral	goemotions
@@ -924,7 +924,7 @@ textid	text	target	source
 922	Outrage over something that isnt even true. Thats sad man Edit: well the bandwaggoning part is true	sadness	goemotions
 923	Some Leftist ideologies frown upon SocDems as counterrevolutionary. Don’t agree with it, but that’s the thought process.	neutral	goemotions
 924	Dump her. Shes not committed to you	neutral	goemotions
-925	Similar but I don't think identical to this	neutral	goemotions
+925	Similar but I don't think identical to this	confusion	goemotions
 926	This makes me so happy!	joy	goemotions
 927	our boi famous	neutral	goemotions
 928	Yeah... THEY are the one looking for attention. This type of comments should be ignored. I hate troll comments.	anger	goemotions
@@ -1155,7 +1155,7 @@ textid	text	target	source
 1153	I did something along those lines almost 2 years ago and got to 67 upvotes before I got banned	neutral	goemotions
 1154	Wow look at this deep pockets eating a lentil a day, I have to slice mine to last me a month!!!	surprise	goemotions
 1155	I enjoy that general area. Sections 203-205 are good sections pricewide and view wise	joy	goemotions
-1156	Did you check the bowl?	neutral	goemotions
+1156	Did you check the bowl?	confusion	goemotions
 1157	KNC is [NAME] syrian political party and a manifestation of the KRG, so yes indirectly.	neutral	goemotions
 1158	I mean, a lot of animals I've seen get terrified of regular stuffed animals, imagine having your fears super sized like that	nervousness	goemotions
 1159	"Same here. I just don't understand how NOBODY at Lucasfilm said during the production, ""Hey maybe this is a bad idea."""	confusion	goemotions
@@ -1217,7 +1217,7 @@ textid	text	target	source
 1215	It’s always nice to say something [nice]!	joy	goemotions
 1216	Oh hell yeah	anger	goemotions
 1217	i'm enjoying this so much	joy	goemotions
-1218	Worst dad ever!	anger	goemotions
+1218	Worst dad ever!	disgust	goemotions
 1219	Thats How femboy works	neutral	goemotions
 1220	He was already hard when I came in	neutral	goemotions
 1221	No particular sauce, I'm just kinda tired of having to search that tiny lil speck of pan for at least 2 minutes before I find it.	nervousness	goemotions
@@ -1253,7 +1253,7 @@ textid	text	target	source
 1251	I will say that her housing bill left a very bad taste in my mouth, and this is coming from someone with a very high opinion of [NAME].	disgust	goemotions
 1252	Literally arrived last week solo. You can use Hellotalk to meet people or go to social events on	neutral	goemotions
 1253	This hits hard, sadly both of my relationships have been toxic so I've decided not to start any new ones until I start going to uni 	sadness	goemotions
-1254	This!!! 🐃 and 💍 for your hard work!	neutral	goemotions
+1254	This!!! 🐃 and 💍 for your hard work!	excitement	goemotions
 1255	Is that going up? It seems like back in the 90's it was 16-17.	neutral	goemotions
 1256	SHE SHOULD BE ON A HILL SOMEWHERE WITH THE SUN AND THE CLOUDS ABOVE HER!	neutral	goemotions
 1257	The USA welfare spend is quite low per gdp compared to first world countries. The safety nets are ridiculous or nonexistant and the inequality is ridiculous...	anger	goemotions
@@ -1458,7 +1458,7 @@ textid	text	target	source
 1456	trailer fabulous!!! i miss it	sadness	goemotions
 1457	Chattel slavery is uniquely different from other types of forced labour and indenture.	neutral	goemotions
 1458	bcash is not bitcoin. its a fork if bitcoin, and you brought up [NAME] yourself which is pretty odd considering you think of him as a distraction.	neutral	goemotions
-1459	Omg I thought you were paraphrasing. I'm so happy that those were the exact words they said.	joy	goemotions
+1459	Omg I thought you were paraphrasing. I'm so happy that those were the exact words they said.	surprise	goemotions
 1460	Then you get home and realise they managed to bill you for the booze. That's half your winnings gone.	neutral	goemotions
 1461	But you ARE!	neutral	goemotions
 1462	It's going to get awfully dark and cold at night.	disgust	goemotions
@@ -1495,7 +1495,7 @@ textid	text	target	source
 1493	FYI not all skinheads are racists. [NAME] suck and should be confronted.	neutral	goemotions
 1494	"Reminds me of ""It's your city!"" back in The Flash 2X08."	neutral	goemotions
 1495	Adoption is an option. You don't have to force someone to exist but you can let them have a good life.	neutral	goemotions
-1496	Can’t believe [NAME] era is coming to an end... feels like yesterday I saw his 1st win against the cowboys with tiki breaking the rushing record.	sadness	goemotions
+1496	Can’t believe [NAME] era is coming to an end... feels like yesterday I saw his 1st win against the cowboys with tiki breaking the rushing record.	surprise	goemotions
 1497	Are you saying the ones who suffer most are billionaire psychopaths? I’m confused by the wording.	confusion	goemotions
 1498	You know even when women wear their hair natural they’re still putting products in it right?	neutral	goemotions
 1499	Those are sexist theories not facts.	neutral	goemotions
@@ -1513,7 +1513,7 @@ textid	text	target	source
 1511	He’s been going to a restaurant for 40 years and forgot what it looked like and where it was.. uh huh.	neutral	goemotions
 1512	PC Plod. The old bill	neutral	goemotions
 1513	Don’t blame us because you’re a dumbass..	anger	goemotions
-1514	Oh my god are you [NAME]? If you are I am huge fan. I completed the IX EE earlier today using your guide	surprise	goemotions
+1514	Oh my god are you [NAME]? If you are I am huge fan. I completed the IX EE earlier today using your guide	excitement	goemotions
 1515	IIRC there is a Simpsons episode where [NAME] has programmed the emergency button on the phone to call the pizza place.	neutral	goemotions
 1516	. . . Wait a fucking second	anger	goemotions
 1517	[NAME] is amped, I'm excited that he's excited	excitement	goemotions
@@ -1533,14 +1533,14 @@ textid	text	target	source
 1531	>cat beby the fuck is wrong with you	anger	goemotions
 1532	Alberta needs to get with the times.	neutral	goemotions
 1533	You da real MVP	neutral	goemotions
-1534	Omg what the ever loving bloody hell did I just read?? As an artist, this was extra painful to me.	sadness	goemotions
+1534	Omg what the ever loving bloody hell did I just read?? As an artist, this was extra painful to me.	surprise	goemotions
 1535	I got mine on the exact same mission!	neutral	goemotions
 1536	I'm not being told I have issues by a guy who actually and genuinely has an interest in coprophagia.	disgust	goemotions
 1537	Things were significantly worse back then than they are now.	disgust	goemotions
 1538	I've probably put a couple hundred miles on my space saver tire. It's still on there right now.	neutral	goemotions
 1539	I've always found it weird how popular Nandos is in Britain.	disgust	goemotions
 1540	We tell our girl friends too when we get asked out :)	neutral	goemotions
-1541	So get a job and leave. It's just going to get worse. First the tv then you. Get out while you can	anger	goemotions
+1541	So get a job and leave. It's just going to get worse. First the tv then you. Get out while you can	disgust	goemotions
 1542	Very sweet of [NAME]	neutral	goemotions
 1543	They are the modern day Nickelback.	neutral	goemotions
 1544	America is not a country, it's a fucking business. if you have zero money, no one cares about you.	anger	goemotions
@@ -1566,9 +1566,9 @@ textid	text	target	source
 1564	oh yeah? Mines real	neutral	goemotions
 1565	Don't doubt yourself. They're wrong.	neutral	goemotions
 1566	When people say [NAME] should be an All star just show them that last possession	neutral	goemotions
-1567	Weirdly enough Salad Fingers is one of [NAME] weaker animations, highly recommend ‘The Unfixable Thought Machine’	neutral	goemotions
+1567	Weirdly enough Salad Fingers is one of [NAME] weaker animations, highly recommend ‘The Unfixable Thought Machine’	disgust	goemotions
 1568	Nahhh just as they came to me	neutral	goemotions
-1569	Lots of internalized rage and mom guilt daily leading to a good shower cry once a week or so.	anger	goemotions
+1569	Lots of internalized rage and mom guilt daily leading to a good shower cry once a week or so.	sadness	goemotions
 1570	happy new year buddy!	joy	goemotions
 1571	All these years I didn't know he escaped just to go to florida and kill some more smh	neutral	goemotions
 1572	Just out of curiosity, what age group are you? Your boyfriend seems real decent nut the scenario sounds like teenagers I'm confused!	confusion	goemotions
@@ -1616,7 +1616,7 @@ textid	text	target	source
 1614	Autism (mechanistic thinking, lack of theory of mind) is the opposite of intuition (thinking without thinking). 	neutral	goemotions
 1615	Make sure you actually try sativas. Don't just listen to people bsing about Sativa causing paranoia/anxiety etc.	neutral	goemotions
 1616	Some people are just very special lmao	neutral	goemotions
-1617	Rapists can have parental rights in some states, assuming they find him.	neutral	goemotions
+1617	Rapists can have parental rights in some states, assuming they find him.	embarrassment	goemotions
 1618	Horseshoe effect going on with FBPE and the no deal brexiteers, basically if you're soft remainer or brexiteers they hate you. The irony ha	neutral	goemotions
 1619	For me, the only thing that makes it cringe is [NAME] covering his mouth	neutral	goemotions
 1620	We know blocking [NAME] was [NAME] choice because he said it was.	neutral	goemotions
@@ -1691,7 +1691,7 @@ textid	text	target	source
 1689	I don't like football but the 10 minutes of actual football has been pretty entertaining so far	excitement	goemotions
 1690	59 days until opening day!!!!!	neutral	goemotions
 1691	Still is glitched to this day.... sad	sadness	goemotions
-1692	Boner. I'd have the weirdest boner.	neutral	goemotions
+1692	Boner. I'd have the weirdest boner.	embarrassment	goemotions
 1693	I enjoy gameplay grind. Don't shoot me lol.	joy	goemotions
 1694	"I was not expecting the giant ""POLICE STATION"" sign. That just makes it all the better. "	neutral	goemotions
 1695	Maybe so , i just dont know about him, team has enough turmoil they just dont need any more distractions	confusion	goemotions
@@ -1766,7 +1766,7 @@ textid	text	target	source
 1764	Refusing to pay someone for work that they've done is theft. You can try to justify it any way you want but that's what it is.	neutral	goemotions
 1765	This is my ex and I rib about this all the time	neutral	goemotions
 1766	As long as you don't kiss her whole face you will be fine. If you both want it, it shouldn't be awkward.	neutral	goemotions
-1767	Hahahah this is awesome.	joy	goemotions
+1767	Hahahah this is awesome.	excitement	goemotions
 1768	The music caught me off guard	surprise	goemotions
 1769	I gotchu bro, house By Gucci Mane I’m a huge Gucci mane fan. 	excitement	goemotions
 1770	The description of the cut marks that KZ gave in MaM sounds as if a sawz-all was used.	neutral	goemotions
@@ -1841,7 +1841,7 @@ textid	text	target	source
 1839	When you insult someone you might want to start by insulting them to where they can understand what you're trying to say...who givES A fuck .	anger	goemotions
 1840	[NAME] will be livid if he does not get a burger but see [NAME] stuffing his face.	neutral	goemotions
 1841	I'm surprised he survived the primary.	surprise	goemotions
-1842	The altcoin thread!? This is the first time I've seen it in 6 months.	neutral	goemotions
+1842	The altcoin thread!? This is the first time I've seen it in 6 months.	surprise	goemotions
 1843	The cognitive dissonance is strong with you.	neutral	goemotions
 1844	The only ignorant person here is you, and the Pope who makes the same baseless claims as you.	anger	goemotions
 1845	It's the issue with a lot of 'activists' who think all's they have to do is exist.	neutral	goemotions
@@ -1928,7 +1928,7 @@ textid	text	target	source
 1926	He may be jealous that you were able to do so	neutral	goemotions
 1927	[NAME] is always the dirtiest psychopath	disgust	goemotions
 1928	“I use to work here and I remember our policy was this!” Did I nail it?	neutral	goemotions
-1929	Isn’t it the worst feeling ever?	confusion	goemotions
+1929	Isn’t it the worst feeling ever?	disgust	goemotions
 1930	Feels good getting a number next to our name again.	joy	goemotions
 1931	Dont mind him/her, they have decided that anything which kinda speaks against the whole Apartheid is to blame for everything for the next 150 Years is bad. 	neutral	goemotions
 1932	Wow. Did not realize [NAME] was a top 20	surprise	goemotions
@@ -2070,15 +2070,15 @@ textid	text	target	source
 2068	Wait one of the posters responding is using makeup from ten years ago.	neutral	goemotions
 2069	Because they enjoy their toxic umoderated cesspool, apparently. Either way i'm done trying to care.	joy	goemotions
 2070	Haha. Got ‘em. Also this just in: Los Angeles is expensive. In other news, unrest in the Middle East.	neutral	goemotions
-2071	You must be ecstatic, I'm really happy for you.	joy	goemotions
+2071	You must be ecstatic, I'm really happy for you.	excitement	goemotions
 2072	The irony of the photo is that 60% of university admissions are women	neutral	goemotions
 2073	Girl I went to school with was killed like this.	neutral	goemotions
 2074	Honestly, fuck [NAME] after the bounty gate shit	anger	goemotions
 2075	“I hold that the more helpless a creature, the more entitled it is to protection by man from the cruelty of man” -[NAME]	neutral	goemotions
 2076	You just watched a commercial that blatantly explains it to you.	neutral	goemotions
-2077	By law, China must accept the South China Sea ruling, period. Stop trying to help China weasel out of it. 	neutral	goemotions
+2077	By law, China must accept the South China Sea ruling, period. Stop trying to help China weasel out of it. 	anger	goemotions
 2078	i know the feeling dude	neutral	goemotions
-2079	Fucking hell they're bringing on all the giants	anger	goemotions
+2079	Fucking hell they're bringing on all the giants	disgust	goemotions
 2080	Weird flex, but ok	disgust	goemotions
 2081	Definitely fake. Looks like bad CGI in a movie.	disgust	goemotions
 2082	Or better yet, on the woman who will let ME play with them!	neutral	goemotions
@@ -2103,7 +2103,7 @@ textid	text	target	source
 2101	If you feel like venting, I am happy to listen.	joy	goemotions
 2102	looks like we got a double win today!!	excitement	goemotions
 2103	P o R Z I n G I S	neutral	goemotions
-2104	Same, ASMR is nightmarish. My skin crawls just thinking about it.	fear	goemotions
+2104	Same, ASMR is nightmarish. My skin crawls just thinking about it.	nervousness	goemotions
 2105	So where are all these [NAME] lining up to be landscapers and farmhands for minimum wage?	neutral	goemotions
 2106	ahh bro I jerk off to [NAME], does that make me a future murderer or torture enthusiast in waiting? didn't even know!	neutral	goemotions
 2107	I guess her Bad breath turned him off	neutral	goemotions
@@ -2126,7 +2126,7 @@ textid	text	target	source
 2124	best to add a **/s** ......almost sounds like you're being serious!	neutral	goemotions
 2125	[NAME] and [NAME] were my two. [NAME] :)	neutral	goemotions
 2126	You shouldn't see a lot of lightspamming conquerors, because lightspamming as a conqueror is just begging for a parry.	neutral	goemotions
-2127	Wow! Congratulations on taking your sex life back! Nice to wake up and see such positivity.	surprise	goemotions
+2127	Wow! Congratulations on taking your sex life back! Nice to wake up and see such positivity.	excitement	goemotions
 2128	I've always wondered how much of this stuff doesn't end up on the internet	surprise	goemotions
 2129	You'll miss a begging old man asking for a spare coin. RIP	sadness	goemotions
 2130	Happy Mic Day!	joy	goemotions
@@ -2153,7 +2153,7 @@ textid	text	target	source
 2151	That doesn’t seem like very responsible presentation of findings.	neutral	goemotions
 2152	god damn this is some major league pathos	neutral	goemotions
 2153	Tell him his Gospels lack integrity due to their anonymity 😭😭😭😭😭😭😭😭	neutral	goemotions
-2154	These memes are either on a 9gag level or r/funny levels of comedy. And I can't tell which is worse.	neutral	goemotions
+2154	These memes are either on a 9gag level or r/funny levels of comedy. And I can't tell which is worse.	disgust	goemotions
 2155	talking about me again?	neutral	goemotions
 2156	[NAME] said that it was recorded the monday after [NAME], that's why his voice is like that.	neutral	goemotions
 2157	Shotgun! But do I get to play with all the buttons too?	neutral	goemotions
@@ -2233,7 +2233,7 @@ textid	text	target	source
 2231	Paying for the drinks doesn’t equate to drinking the drinks.	neutral	goemotions
 2232	Left handers are rejoicing over this	joy	goemotions
 2233	Take a seat young ragewalker.	excitement	goemotions
-2234	Brooklyn-Boston playoffs would be the most toxic thing of all time. Only Sixers-Cs would be worse	neutral	goemotions
+2234	Brooklyn-Boston playoffs would be the most toxic thing of all time. Only Sixers-Cs would be worse	disgust	goemotions
 2235	Because they aren't different subspecies	neutral	goemotions
 2236	It’s not violence against political opponents if it’s against a tyrant, which you define as a political opponent	neutral	goemotions
 2237	Probably smashed his oil pan too, I'd give that car 3 miles to live.	neutral	goemotions
@@ -2277,7 +2277,7 @@ textid	text	target	source
 2275	It appears [NAME] has come back as a cat.	neutral	goemotions
 2276	That's a surprise from this guy.	surprise	goemotions
 2277	>![NAME] get the crossbow before it's too late he can't breath oh [NAME] please hurry im shaking and crying rn!<	nervousness	goemotions
-2278	Is that not with mice though? I could be wrong or maybe its rats & mice. Edit: field mice in particular.	neutral	goemotions
+2278	Is that not with mice though? I could be wrong or maybe its rats & mice. Edit: field mice in particular.	confusion	goemotions
 2279	Waahha, ohh, they massawaaa... STOP IT. YOU CAN ACT LIKE A MAN.	anger	goemotions
 2280	[NAME] living her best life in Germany.	joy	goemotions
 2281	What camouflage?	confusion	goemotions
@@ -2309,7 +2309,7 @@ textid	text	target	source
 2307	“Guys watch out, the scary looking kid is coming down the hall”	fear	goemotions
 2308	They are both owned by the same parent company and they probably wanted to get their money's worth since Taco Bell isn't really prevelant in EU	neutral	goemotions
 2309	i feel like slapping /s after everything sucks the fun out. it's not my fault people are autistic.... /s	anger	goemotions
-2310	"I did! Never moving back, I love my life in the ""big smoke""."	joy	goemotions
+2310	"I did! Never moving back, I love my life in the ""big smoke""."	pride	goemotions
 2311	I can’t believe sb found this even remotely funny.	surprise	goemotions
 2312	Ah, yes. Again with those goddam ballbusting monkeys. If I had a dollar...	neutral	goemotions
 2313	"""How did they get away from everyone. ""Fillies and gentlecolts,we are gathered here today to honor the nation of England for this Oscar."	neutral	goemotions
@@ -2437,13 +2437,13 @@ textid	text	target	source
 2435	"""12 inch"""	neutral	goemotions
 2436	So they're just not going to change it like they did in the Louisville game? That's cool..	neutral	goemotions
 2437	Wow. This is messed up.	surprise	goemotions
-2438	Meanwhile, 1500 a day continue to die from cigarettes	neutral	goemotions
+2438	Meanwhile, 1500 a day continue to die from cigarettes	sadness	goemotions
 2439	I'd very much doubt many people believe there was no awareness or complicity.	confusion	goemotions
 2440	Whoever told you that is lying.	neutral	goemotions
 2441	It's pretty warm in Australia during this time of year.	neutral	goemotions
 2442	I'll take a window seat for lmao at this.	neutral	goemotions
 2443	Before things like that can happen we need to first atleast make it stable and usable for the people that actually do pay	neutral	goemotions
-2444	Omg. I just noticed that! Holy fuck, how does she smell?	surprise	goemotions
+2444	Omg. I just noticed that! Holy fuck, how does she smell?	excitement	goemotions
 2445	He must've done something real bad. I played with a guy who by all counts was an asshole but never received more than mutes.	embarrassment	goemotions
 2446	I think it's time to let him go, for your life's sake!	neutral	goemotions
 2447	Problem is fornite kids are playing fortnite.	neutral	goemotions
@@ -2515,7 +2515,7 @@ textid	text	target	source
 2513	I appreciate [NAME] diving for that, but because he did, it lead to wide open Korver transition 3. About as automatic as it gets	neutral	goemotions
 2514	The best ever you are the [NAME]!!	neutral	goemotions
 2515	My only criticism is xhaka, too slow on and off the ball.	neutral	goemotions
-2516	Thats the high life of empowerment.	neutral	goemotions
+2516	Thats the high life of empowerment.	pride	goemotions
 2517	Never let facts get in the way of a good story.	neutral	goemotions
 2518	feeling like im not normal and that im shameful and wrong and other people telling me those things are what have done this to me	embarrassment	goemotions
 2519	why is this hard to believe it’s totally believable	confusion	goemotions
@@ -2710,7 +2710,7 @@ textid	text	target	source
 2708	WHY IS THERE WOMAN ON MY ENTERTAINMENT??????????	neutral	goemotions
 2709	Air Vooch oh my!	neutral	goemotions
 2710	My kitten just got very happy when Pasta scored. Such loud purrs! I was happy too.	joy	goemotions
-2711	I'm glad you have your kids, but have you seen Brooklyn 99 like the op stated? It's worth living for too.	confusion	goemotions
+2711	I'm glad you have your kids, but have you seen Brooklyn 99 like the op stated? It's worth living for too.	excitement	goemotions
 2712	I actually felt my ballsack jump up a bit when he face planted	neutral	goemotions
 2713	Winter isn't even that bad here.	neutral	goemotions
 2714	This. We already have so much more OL talent. We need another WR and TE, but I'm kinda excited	excitement	goemotions
@@ -2737,7 +2737,7 @@ textid	text	target	source
 2735	Stick with us. If only for one more day. Then let’s try again tomorrow.	neutral	goemotions
 2736	This whole sub makes me sad.	sadness	goemotions
 2737	I always feel so bad for [NAME] when I watch this scene.	sadness	goemotions
-2738	Would any gathering of the Knights of Ren count? Or would they have to officially organize a thing.	neutral	goemotions
+2738	Would any gathering of the Knights of Ren count? Or would they have to officially organize a thing.	confusion	goemotions
 2739	Here, kiddo. Happy cake day. You need it more than I do.	excitement	goemotions
 2740	Hang on is that allowed? Geez that guy seemed really angry.	confusion	goemotions
 2741	Found the douchebag	neutral	goemotions
@@ -2793,7 +2793,7 @@ textid	text	target	source
 2791	Only good ones.	neutral	goemotions
 2792	Nah, girl, you did great. I'm also shocked by guys who want to hook up without a condom.	surprise	goemotions
 2793	Shes 43 with 4 kids. That's so far past the wall it's not funny.	neutral	goemotions
-2794	Im not 😀 Glad you realize your mistake and why I was confused 😉	joy	goemotions
+2794	Im not 😀 Glad you realize your mistake and why I was confused 😉	confusion	goemotions
 2795	Big OUCHIE!	neutral	goemotions
 2796	Your Mom was ruled by [NAME] dynasty that happened to be Macedonian for the next three centuries.	neutral	goemotions
 2797	High IQ post. I imagine this is exactly what’s going to happen.	neutral	goemotions
@@ -2836,7 +2836,7 @@ textid	text	target	source
 2834	Even worse.	disgust	goemotions
 2835	Ik I’m crying rn	sadness	goemotions
 2836	Of all 3 trilogies the Prequels pander the most to children. Even with its monotonous political banter.	neutral	goemotions
-2837	Is there any way to somebody can please translate the notes into doc form or something? I am having trouble viewing them :(	neutral	goemotions
+2837	Is there any way to somebody can please translate the notes into doc form or something? I am having trouble viewing them :(	sadness	goemotions
 2838	How do we know you're not a Mossad agent? I mean, not right now but, what if you joined in the future? /s	neutral	goemotions
 2839	Big and smooth as a marble.	neutral	goemotions
 2840	RantGrumps in a damn nutshell	neutral	goemotions

@@ -1,6 +1,6 @@
 # Dataset Configuration Guide
 
-## 🚨 CRITICAL NOTE
+## CRITICAL NOTE
 
 **The configurable train/validation/test splits ONLY apply to the Journal dataset.**
 
@@ -17,7 +17,7 @@ This design makes sense because:
 
 Both dataset creation scripts now support flexible train/validation/test splits for different experimental scenarios (zero-shot, few-shot, full training).
 
-**⚠️ IMPORTANT: Configurable splits apply to JOURNAL dataset ONLY.**
+** IMPORTANT: Configurable splits apply to JOURNAL dataset ONLY.**
 
 - **GoEmotions**: Uses its original pre-split files (train.tsv, dev.tsv, test.tsv) - NOT affected by configuration
 - **Journal**: Fully configurable splits based on the settings you choose
@@ -209,9 +209,9 @@ The scripts will print:
 
 Example output:
 ```
-📊 Split configuration: 5% train / 5% val / 90% test
+Split configuration: 5% train / 5% val / 90% test
 
-📊 Split sizes:
+Split sizes:
    Training:      50 (5.0%)
    Validation:    50 (5.0%)
    Test:         900 (90.0%)

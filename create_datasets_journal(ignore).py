@@ -76,7 +76,7 @@ def process_journal_dataset(input_csv_path):
     
     # Read CSV
     df = pd.read_csv(input_csv_path)
-    print(f"\n📂 Loaded {len(df)} journal entries")
+    print(f"\n Loaded {len(df)} journal entries")
     
     output_rows = []
     textid_counter = 0
@@ -103,8 +103,8 @@ def process_journal_dataset(input_csv_path):
     
     result_df = pd.DataFrame(output_rows)
     
-    print(f"\n✅ Created {len(result_df)} examples from {len(df)} journal entries")
-    print("\n📊 Emotion Distribution:")
+    print(f"\n Created {len(result_df)} examples from {len(df)} journal entries")
+    print("\n Emotion Distribution:")
     for emotion, count in sorted(emotion_counts.items()):
         pct = (count / len(result_df)) * 100 if len(result_df) > 0 else 0
         print(f"   {emotion:15s}: {count:4,} ({pct:5.2f}%)")
@@ -205,30 +205,30 @@ def main():
     print("=" * 70)
     
     train_df.to_csv(f'{output_path}sent_training_data_journal.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_path}sent_training_data_journal.tsv")
+    print(f" Saved: {output_path}sent_training_data_journal.tsv")
     
     val_df.to_csv(f'{output_path}validate_sent_journal.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_path}validate_sent_journal.tsv")
+    print(f" Saved: {output_path}validate_sent_journal.tsv")
     
     test_df.to_csv(f'{output_path}test_sent_journal.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_path}test_sent_journal.tsv")
+    print(f" Saved: {output_path}test_sent_journal.tsv")
     
     # Show samples
     print("\n" + "=" * 70)
     print("SAMPLE DATA")
     print("=" * 70)
     
-    print("\n📝 Sample from Training Set:")
+    print("\n Sample from Training Set:")
     print(train_df.head(5).to_string(index=False))
     
-    print("\n📝 Sample from Test Set (with 'target' column):")
+    print("\n Sample from Test Set (with 'target' column):")
     print(test_df.head(5).to_string(index=False))
     
     print("\n" + "=" * 70)
-    print("✅ JOURNAL DATASET PROCESSING COMPLETE!")
+    print(" JOURNAL DATASET PROCESSING COMPLETE!")
     print("=" * 70)
     
-    print(f"\n📁 Local output: {output_path}")
+    print(f"\n Local output: {output_path}")
     
     print("\n" + "=" * 70)
     print("CONFIG FOR NLP SCHOLAR")
@@ -239,10 +239,10 @@ def main():
     print(f"validfpath: {turing_output_path}validate_sent_journal.tsv")
     print(f"modelfpath: {turing_output_path}model_journal")
     
-    print("\n📤 Upload to Turing:")
+    print("\n Upload to Turing:")
     print(f"   scp -r {output_path} {turing_username}@turing:/home/{turing_username}/data/")
     
-    print("\n💡 Dataset Notes:")
+    print("\n Dataset Notes:")
     print(f"   • Total entries: {len(journal_df)} (from {len(pd.read_csv(journal_input_path))} journal entries)")
     print("   • This is UNNORMALIZED - emotions have natural distribution")
     print("   • Multi-label entries are expanded to multiple rows")

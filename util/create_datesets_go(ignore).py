@@ -78,14 +78,14 @@ def balance_dataset(df, split_name):
     
     # Get counts before balancing
     label_counts_before = df[label_col].value_counts()
-    print(f"\n📊 Distribution BEFORE balancing:")
+    print(f"\n Distribution BEFORE balancing:")
     for label, count in label_counts_before.items():
         pct = (count / len(df)) * 100
         print(f"   {label:15s}: {count:5,} ({pct:5.2f}%)")
     
     # Find the minimum count
     min_count = label_counts_before.min()
-    print(f"\n🎯 Target count per emotion: {min_count:,}")
+    print(f"\n Target count per emotion: {min_count:,}")
     
     # Sample each emotion to have exactly min_count examples
     balanced_dfs = []
@@ -109,12 +109,12 @@ def balance_dataset(df, split_name):
     
     # Show after balancing
     label_counts_after = balanced_df[label_col].value_counts()
-    print(f"\n📊 Distribution AFTER balancing:")
+    print(f"\n Distribution AFTER balancing:")
     for label, count in label_counts_after.items():
         pct = (count / len(balanced_df)) * 100
         print(f"   {label:15s}: {count:5,} ({pct:5.2f}%)")
     
-    print(f"\n✅ Reduced from {len(df):,} to {len(balanced_df):,} examples ({len(df) - len(balanced_df):,} removed)")
+    print(f"\n Reduced from {len(df):,} to {len(balanced_df):,} examples ({len(df) - len(balanced_df):,} removed)")
     
     return balanced_df
 
@@ -203,13 +203,13 @@ def main():
     print("=" * 70)
     
     # Process train, dev, test
-    print("\n📂 Loading and filtering train.tsv...")
+    print("\n Loading and filtering train.tsv...")
     train_df = filter_goemotions_by_overlap(f'{goemotions_input_path}train.tsv', 'train')
     
-    print("\n📂 Loading and filtering dev.tsv...")
+    print("\n Loading and filtering dev.tsv...")
     validate_df = filter_goemotions_by_overlap(f'{goemotions_input_path}dev.tsv', 'validation')
     
-    print("\n📂 Loading and filtering test.tsv...")
+    print("\n Loading and filtering test.tsv...")
     test_df = filter_goemotions_by_overlap(f'{goemotions_input_path}test.tsv', 'test')
     
     print("\n" + "=" * 70)
@@ -218,13 +218,13 @@ def main():
     
     # Save UNNORMALIZED (full filtered data)
     train_df.to_csv(f'{output_unnormalized_path}sent_training_data_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_unnormalized_path}sent_training_data_go.tsv")
+    print(f" Saved: {output_unnormalized_path}sent_training_data_go.tsv")
     
     validate_df.to_csv(f'{output_unnormalized_path}validate_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_unnormalized_path}validate_sent_go.tsv")
+    print(f" Saved: {output_unnormalized_path}validate_sent_go.tsv")
     
     test_df.to_csv(f'{output_unnormalized_path}test_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_unnormalized_path}test_sent_go.tsv")
+    print(f" Saved: {output_unnormalized_path}test_sent_go.tsv")
     
     # Balance datasets
     print("\n" + "=" * 70)
@@ -241,25 +241,25 @@ def main():
     print("=" * 70)
     
     train_balanced.to_csv(f'{output_normalized_path}sent_training_data_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_normalized_path}sent_training_data_go.tsv")
+    print(f" Saved: {output_normalized_path}sent_training_data_go.tsv")
     
     validate_balanced.to_csv(f'{output_normalized_path}validate_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_normalized_path}validate_sent_go.tsv")
+    print(f" Saved: {output_normalized_path}validate_sent_go.tsv")
     
     test_balanced.to_csv(f'{output_normalized_path}test_sent_go.tsv', sep='\t', index=False)
-    print(f"✅ Saved: {output_normalized_path}test_sent_go.tsv")
+    print(f" Saved: {output_normalized_path}test_sent_go.tsv")
     
     print("\n" + "=" * 70)
     print("DATASET STATISTICS - UNNORMALIZED (FULL)")
     print("=" * 70)
     
-    print(f"\n📊 Dataset Sizes (full filtered):")
+    print(f"\n Dataset Sizes (full filtered):")
     print(f"   Training:   {len(train_df):,} examples")
     print(f"   Validation: {len(validate_df):,} examples")
     print(f"   Test:       {len(test_df):,} examples")
     print(f"   Total:      {len(train_df) + len(validate_df) + len(test_df):,} examples")
     
-    print("\n📋 Label Distribution in Training Set (unnormalized):")
+    print("\n Label Distribution in Training Set (unnormalized):")
     label_counts = train_df['label'].value_counts()
     for label, count in label_counts.items():
         pct = (count / len(train_df)) * 100
@@ -269,23 +269,23 @@ def main():
     print("DATASET STATISTICS - NORMALIZED (BALANCED)")
     print("=" * 70)
     
-    print(f"\n📊 Dataset Sizes (balanced):")
+    print(f"\n Dataset Sizes (balanced):")
     print(f"   Training:   {len(train_balanced):,} examples")
     print(f"   Validation: {len(validate_balanced):,} examples")
     print(f"   Test:       {len(test_balanced):,} examples")
     print(f"   Total:      {len(train_balanced) + len(validate_balanced) + len(test_balanced):,} examples")
     
-    print("\n📝 Sample from Training Set (balanced):")
+    print("\n Sample from Training Set (balanced):")
     print(train_balanced.head(10).to_string(index=False))
     
     print("\n" + "=" * 70)
-    print("✅ ALL DATASETS CREATED!")
+    print(" ALL DATASETS CREATED!")
     print("=" * 70)
     
-    print(f"\n📁 UNNORMALIZED output: {output_unnormalized_path}")
-    print(f"📁 NORMALIZED output:   {output_normalized_path}")
+    print(f"\n UNNORMALIZED output: {output_unnormalized_path}")
+    print(f" NORMALIZED output:   {output_normalized_path}")
     
-    print("\n📦 Files created:")
+    print("\n Files created:")
     print("\n   UNNORMALIZED (full filtered - larger, imbalanced):")
     print(f"     {output_unnormalized_path}")
     print("       • sent_training_data_go.tsv")
@@ -302,18 +302,18 @@ def main():
     print("TRAINING RECOMMENDATIONS")
     print("=" * 70)
     
-    print("\n💡 Strategy: Train BOTH models and compare")
+    print("\n Strategy: Train BOTH models and compare")
     print(f"\n   Model A - UNNORMALIZED ({len(train_df):,} training examples):")
-    print("     ✅ More data → better representations")
-    print("     ✅ Real-world emotion distribution")
-    print("     ⚠️  Imbalanced → may favor frequent emotions")
-    print("     💡 Use class weights or focal loss")
+    print("      More data → better representations")
+    print("      Real-world emotion distribution")
+    print("       Imbalanced → may favor frequent emotions")
+    print("      Use class weights or focal loss")
     
     print(f"\n   Model B - NORMALIZED ({len(train_balanced):,} training examples):")
-    print("     ✅ Equal learning per emotion")
-    print("     ✅ Fair evaluation across all categories")
-    print("     ⚠️  Much less data overall")
-    print("     💡 Good baseline for comparison")
+    print("      Equal learning per emotion")
+    print("      Fair evaluation across all categories")
+    print("       Much less data overall")
+    print("      Good baseline for comparison")
     
     print("\n" + "=" * 70)
     print("CONFIG EXAMPLES FOR NLP SCHOLAR")
@@ -329,7 +329,7 @@ def main():
     print(f"validfpath: {turing_normalized_path}validate_sent_go.tsv")
     print(f"modelfpath: {turing_normalized_path}model_goemotions_balanced")
     
-    print("\n📤 Upload to Turing:")
+    print("\n Upload to Turing:")
     print(f"   scp -r {output_unnormalized_path} {turing_username}@turing:/home/{turing_username}/data/")
     print(f"   scp -r {output_normalized_path} {turing_username}@turing:/home/{turing_username}/data/")
 

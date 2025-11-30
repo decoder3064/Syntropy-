@@ -302,7 +302,7 @@ def main():
     print("TRAINING RECOMMENDATIONS")
     print("=" * 70)
     
-    print("\n💡 Strategy: Train BOTH models and compare")
+    print("\n Strategy: Train BOTH models and compare")
     print(f"\n   Model A - UNNORMALIZED ({len(train_df):,} training examples):")
     print("      More data → better representations")
     print("      Real-world emotion distribution")
@@ -329,7 +329,7 @@ def main():
     print(f"validfpath: {turing_normalized_path}validate_sent_go.tsv")
     print(f"modelfpath: {turing_normalized_path}model_goemotions_balanced")
     
-    print("\n📤 Upload to Turing:")
+    print("\n Upload to Turing:")
     print(f"   scp -r {output_unnormalized_path} {turing_username}@turing:/home/{turing_username}/data/")
     print(f"   scp -r {output_normalized_path} {turing_username}@turing:/home/{turing_username}/data/")
 

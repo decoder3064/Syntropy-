@@ -395,13 +395,13 @@ def main():
     print("FINAL SUMMARY - DEDUPLICATED DATASETS")
     print("="*70)
     
-    print("\n📊 GoEmotions (deduplicated):")
+    print("\n GoEmotions (deduplicated):")
     print(f"   Training:   {len(train_go):5,} unique texts")
     print(f"   Validation: {len(val_go):5,} unique texts")
     print(f"   Test:       {len(test_go):5,} unique texts")
     print(f"   Total:      {len(train_go) + len(val_go) + len(test_go):5,} unique texts")
     
-    print("\n📊 Journal (deduplicated):")
+    print("\n Journal (deduplicated):")
     print(f"   Training:   {len(train_j):5,} unique texts")
     print(f"   Validation: {len(val_j):5,} unique texts")
     print(f"   Test:       {len(test_j):5,} unique texts")

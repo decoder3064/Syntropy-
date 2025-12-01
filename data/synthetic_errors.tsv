@@ -1,4 +1,4 @@
-textid	text	label	source	error_type	specific_error	num_errors
+textid	text	target	source	error_type	specific_error	num_errors
 1	still grossed out by that encounter from earlier. I encountered a clogged drain and it made me feel sick to my stomach.	disgust	synthetic_variant	Sentence	Missing Subject	0
 2	Traffic was terrible happened and now I'm too mortified to show my facce. I wish I could take back what I said from today.	embarrassment	synthetic_variant	Word	Repeating Letter	1
 3	I finally managed to syand up for myself and it feels amazing! I'm really satisfied with hoe I handled becoming more organized.	pride	synthetic_variant	Word	Adjacent Key	3

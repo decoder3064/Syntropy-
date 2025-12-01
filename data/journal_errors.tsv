@@ -1,4 +1,4 @@
-textid	text	label	source	error_type	specific_error	num_errors
+textid	text	target	source	error_type	specific_error	num_errors
 43	Went grocery shopping with my mom. Got a flu shot while	joy	journal	Sentence	Missing Object	0
 1160	the day I took my son for a well visit at his pediatrician and it went very well. He cooperated with the doctor and the nurse, and even said he had a fun time afterwards.	pride	journal	Sentence	Missing Subject	0
 128	My family is the most important thing in my life. I makes me	joy	journal	Sentence	Missing Complete Thought	0

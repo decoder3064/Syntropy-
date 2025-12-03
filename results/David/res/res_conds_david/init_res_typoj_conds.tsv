@@ -1,0 +1,83 @@
+	model	error_type	target	specific_error	micro-precision	micro-recall	micro-f1	macro-precision	macro-recall	macro-f1	accuracy
+0	../final/models/models_2nd_run/model1_0	Sentence	anger	Missing Complete Thought	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+1	../final/models/models_2nd_run/model1_0	Sentence	anger	Missing Object	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+2	../final/models/models_2nd_run/model1_0	Sentence	anger	Missing Subject	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+3	../final/models/models_2nd_run/model1_0	Sentence	confusion	Missing Complete Thought	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+4	../final/models/models_2nd_run/model1_0	Sentence	confusion	Missing Object	1.0	0.25	0.4	1.0	0.25	0.4	0.25
+5	../final/models/models_2nd_run/model1_0	Sentence	confusion	Missing Subject	1.0	0.25	0.4	1.0	0.25	0.4	0.25
+6	../final/models/models_2nd_run/model1_0	Sentence	disgust	Missing Complete Thought	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+7	../final/models/models_2nd_run/model1_0	Sentence	disgust	Missing Object	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+8	../final/models/models_2nd_run/model1_0	Sentence	disgust	Missing Subject	1.0	0.4	0.5714285714285714	1.0	0.4	0.5714285714285714	0.4
+9	../final/models/models_2nd_run/model1_0	Sentence	embarrassment	Missing Object	1.0	0.16666666666666666	0.2857142857142857	1.0	0.16666666666666666	0.2857142857142857	0.16666666666666666
+10	../final/models/models_2nd_run/model1_0	Sentence	embarrassment	Missing Subject	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+11	../final/models/models_2nd_run/model1_0	Sentence	excitement	Missing Complete Thought	1.0	0.13793103448275862	0.24242424242424243	1.0	0.13793103448275862	0.24242424242424243	0.13793103448275862
+12	../final/models/models_2nd_run/model1_0	Sentence	excitement	Missing Object	1.0	0.1388888888888889	0.24390243902439024	1.0	0.1388888888888889	0.24390243902439024	0.1388888888888889
+13	../final/models/models_2nd_run/model1_0	Sentence	excitement	Missing Subject	1.0	0.14285714285714285	0.25	1.0	0.14285714285714285	0.25	0.14285714285714285
+14	../final/models/models_2nd_run/model1_0	Sentence	fear	Missing Complete Thought	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+15	../final/models/models_2nd_run/model1_0	Sentence	fear	Missing Object	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+16	../final/models/models_2nd_run/model1_0	Sentence	fear	Missing Subject	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+17	../final/models/models_2nd_run/model1_0	Sentence	joy	Missing Complete Thought	1.0	0.6363636363636364	0.7777777777777778	1.0	0.6363636363636364	0.7777777777777778	0.6363636363636364
+18	../final/models/models_2nd_run/model1_0	Sentence	joy	Missing Object	1.0	0.5952380952380952	0.746268656716418	1.0	0.5952380952380952	0.746268656716418	0.5952380952380952
+19	../final/models/models_2nd_run/model1_0	Sentence	joy	Missing Subject	1.0	0.7166666666666667	0.8349514563106796	1.0	0.7166666666666667	0.8349514563106796	0.7166666666666667
+20	../final/models/models_2nd_run/model1_0	Sentence	nervousness	Missing Complete Thought	1.0	0.4	0.5714285714285714	1.0	0.4	0.5714285714285714	0.4
+21	../final/models/models_2nd_run/model1_0	Sentence	nervousness	Missing Object	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+22	../final/models/models_2nd_run/model1_0	Sentence	nervousness	Missing Subject	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+23	../final/models/models_2nd_run/model1_0	Sentence	neutral	Missing Complete Thought	1.0	0.1864406779661017	0.3142857142857143	1.0	0.1864406779661017	0.3142857142857143	0.1864406779661017
+24	../final/models/models_2nd_run/model1_0	Sentence	neutral	Missing Object	1.0	0.10416666666666667	0.18867924528301888	1.0	0.10416666666666667	0.18867924528301888	0.10416666666666667
+25	../final/models/models_2nd_run/model1_0	Sentence	neutral	Missing Subject	1.0	0.02857142857142857	0.05555555555555555	1.0	0.02857142857142857	0.05555555555555555	0.02857142857142857
+26	../final/models/models_2nd_run/model1_0	Sentence	pride	Missing Complete Thought	1.0	0.30612244897959184	0.46875	1.0	0.30612244897959184	0.46875	0.30612244897959184
+27	../final/models/models_2nd_run/model1_0	Sentence	pride	Missing Object	1.0	0.3142857142857143	0.4782608695652174	1.0	0.3142857142857143	0.4782608695652174	0.3142857142857143
+28	../final/models/models_2nd_run/model1_0	Sentence	pride	Missing Subject	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+29	../final/models/models_2nd_run/model1_0	Sentence	sadness	Missing Complete Thought	1.0	0.7777777777777778	0.875	1.0	0.7777777777777778	0.875	0.7777777777777778
+30	../final/models/models_2nd_run/model1_0	Sentence	sadness	Missing Object	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+31	../final/models/models_2nd_run/model1_0	Sentence	sadness	Missing Subject	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+32	../final/models/models_2nd_run/model1_0	Sentence	surprise	Missing Complete Thought	1.0	0.25	0.4	1.0	0.25	0.4	0.25
+33	../final/models/models_2nd_run/model1_0	Sentence	surprise	Missing Object	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+34	../final/models/models_2nd_run/model1_0	Sentence	surprise	Missing Subject	1.0	0.1	0.18181818181818182	1.0	0.1	0.18181818181818182	0.1
+35	../final/models/models_2nd_run/model1_0	Word	anger	Adjacent Key	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+36	../final/models/models_2nd_run/model1_0	Word	anger	Missing Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+37	../final/models/models_2nd_run/model1_0	Word	anger	Repeating Letter	1.0	0.2	0.3333333333333333	1.0	0.2	0.3333333333333333	0.2
+38	../final/models/models_2nd_run/model1_0	Word	anger	Scrambled Letter	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+39	../final/models/models_2nd_run/model1_0	Word	confusion	Adjacent Key	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+40	../final/models/models_2nd_run/model1_0	Word	confusion	Missing Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+41	../final/models/models_2nd_run/model1_0	Word	confusion	Repeating Letter	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+42	../final/models/models_2nd_run/model1_0	Word	confusion	Scrambled Letter	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+43	../final/models/models_2nd_run/model1_0	Word	disgust	Adjacent Key	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+44	../final/models/models_2nd_run/model1_0	Word	disgust	Missing Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+45	../final/models/models_2nd_run/model1_0	Word	disgust	Repeating Letter	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+46	../final/models/models_2nd_run/model1_0	Word	disgust	Scrambled Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+47	../final/models/models_2nd_run/model1_0	Word	embarrassment	Adjacent Key	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+48	../final/models/models_2nd_run/model1_0	Word	embarrassment	Repeating Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+49	../final/models/models_2nd_run/model1_0	Word	embarrassment	Scrambled Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+50	../final/models/models_2nd_run/model1_0	Word	excitement	Adjacent Key	1.0	0.17391304347826086	0.2962962962962963	1.0	0.17391304347826086	0.2962962962962963	0.17391304347826086
+51	../final/models/models_2nd_run/model1_0	Word	excitement	Missing Letter	1.0	0.20689655172413793	0.34285714285714286	1.0	0.20689655172413793	0.34285714285714286	0.20689655172413793
+52	../final/models/models_2nd_run/model1_0	Word	excitement	Repeating Letter	1.0	0.2857142857142857	0.4444444444444444	1.0	0.2857142857142857	0.4444444444444444	0.2857142857142857
+53	../final/models/models_2nd_run/model1_0	Word	excitement	Scrambled Letter	1.0	0.21052631578947367	0.34782608695652173	1.0	0.21052631578947367	0.34782608695652173	0.21052631578947367
+54	../final/models/models_2nd_run/model1_0	Word	fear	Adjacent Key	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+55	../final/models/models_2nd_run/model1_0	Word	fear	Missing Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+56	../final/models/models_2nd_run/model1_0	Word	fear	Repeating Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+57	../final/models/models_2nd_run/model1_0	Word	fear	Scrambled Letter	1.0	0.3333333333333333	0.5	1.0	0.3333333333333333	0.5	0.3333333333333333
+58	../final/models/models_2nd_run/model1_0	Word	joy	Adjacent Key	1.0	0.7714285714285715	0.8709677419354839	1.0	0.7714285714285715	0.8709677419354839	0.7714285714285715
+59	../final/models/models_2nd_run/model1_0	Word	joy	Missing Letter	1.0	0.7428571428571429	0.8524590163934426	1.0	0.7428571428571429	0.8524590163934426	0.7428571428571429
+60	../final/models/models_2nd_run/model1_0	Word	joy	Repeating Letter	1.0	0.6	0.75	1.0	0.6	0.75	0.6
+61	../final/models/models_2nd_run/model1_0	Word	joy	Scrambled Letter	1.0	0.7105263157894737	0.8307692307692308	1.0	0.7105263157894737	0.8307692307692308	0.7105263157894737
+62	../final/models/models_2nd_run/model1_0	Word	nervousness	Adjacent Key	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+63	../final/models/models_2nd_run/model1_0	Word	nervousness	Missing Letter	1.0	0.1875	0.3157894736842105	1.0	0.1875	0.3157894736842105	0.1875
+64	../final/models/models_2nd_run/model1_0	Word	nervousness	Repeating Letter	1.0	0.5	0.6666666666666666	1.0	0.5	0.6666666666666666	0.5
+65	../final/models/models_2nd_run/model1_0	Word	nervousness	Scrambled Letter	1.0	0.2222222222222222	0.36363636363636365	1.0	0.2222222222222222	0.36363636363636365	0.2222222222222222
+66	../final/models/models_2nd_run/model1_0	Word	neutral	Adjacent Key	1.0	0.11764705882352941	0.21052631578947367	1.0	0.11764705882352941	0.21052631578947367	0.11764705882352941
+67	../final/models/models_2nd_run/model1_0	Word	neutral	Missing Letter	1.0	0.11363636363636363	0.20408163265306123	1.0	0.11363636363636363	0.20408163265306123	0.11363636363636363
+68	../final/models/models_2nd_run/model1_0	Word	neutral	Repeating Letter	1.0	0.2	0.3333333333333333	1.0	0.2	0.3333333333333333	0.2
+69	../final/models/models_2nd_run/model1_0	Word	neutral	Scrambled Letter	1.0	0.0967741935483871	0.17647058823529413	1.0	0.0967741935483871	0.17647058823529413	0.0967741935483871
+70	../final/models/models_2nd_run/model1_0	Word	pride	Adjacent Key	1.0	0.2903225806451613	0.45	1.0	0.2903225806451613	0.45	0.2903225806451613
+71	../final/models/models_2nd_run/model1_0	Word	pride	Missing Letter	1.0	0.23076923076923078	0.375	1.0	0.23076923076923078	0.375	0.23076923076923078
+72	../final/models/models_2nd_run/model1_0	Word	pride	Repeating Letter	1.0	0.25925925925925924	0.4117647058823529	1.0	0.25925925925925924	0.4117647058823529	0.25925925925925924
+73	../final/models/models_2nd_run/model1_0	Word	pride	Scrambled Letter	1.0	0.11538461538461539	0.20689655172413793	1.0	0.11538461538461539	0.20689655172413793	0.11538461538461539
+74	../final/models/models_2nd_run/model1_0	Word	sadness	Adjacent Key	1.0	0.6666666666666666	0.8	1.0	0.6666666666666666	0.8	0.6666666666666666
+75	../final/models/models_2nd_run/model1_0	Word	sadness	Missing Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+76	../final/models/models_2nd_run/model1_0	Word	sadness	Repeating Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+77	../final/models/models_2nd_run/model1_0	Word	sadness	Scrambled Letter	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+78	../final/models/models_2nd_run/model1_0	Word	surprise	Adjacent Key	1.0	0.25	0.4	1.0	0.25	0.4	0.25
+79	../final/models/models_2nd_run/model1_0	Word	surprise	Missing Letter	1.0	0.1111111111111111	0.2	1.0	0.1111111111111111	0.2	0.1111111111111111
+80	../final/models/models_2nd_run/model1_0	Word	surprise	Repeating Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+81	../final/models/models_2nd_run/model1_0	Word	surprise	Scrambled Letter	0.0	0.0	0.0	0.0	0.0	0.0	0.0

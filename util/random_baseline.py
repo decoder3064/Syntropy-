@@ -53,4 +53,5 @@ def main():
     print("Accuracy:", metrics["accuracy"])
     print("Confusion Matrix:\n", metrics["confusion_matrix"])
     
-main()
+if __name__ == "__main__":
+    main()

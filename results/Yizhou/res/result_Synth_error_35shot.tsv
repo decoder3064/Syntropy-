@@ -1,0 +1,2 @@
+	model	micro-precision	micro-recall	micro-f1	macro-precision	macro-recall	macro-f1	accuracy
+0	../Syntropy_Result_Finals/Models/Model_Journal_Tuned35	0.7591255515443242	0.7591255515443242	0.7591255515443242	0.8307756335943255	0.759125551544324	0.7620936235799952	0.7591255515443242

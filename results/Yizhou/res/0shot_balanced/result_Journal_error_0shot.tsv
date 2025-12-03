@@ -1,0 +1,2 @@
+	model	micro-precision	micro-recall	micro-f1	macro-precision	macro-recall	macro-f1	accuracy
+0	../Syntropy_Result_Finals/Models/Model_Trained_Go_Emotion	0.32050274941084056	0.32050274941084056	0.32050274941084056	0.34105117689087466	0.26253636661908963	0.25650695683045405	0.32050274941084056

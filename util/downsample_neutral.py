@@ -38,7 +38,7 @@ def downsample_neutral(input_tsv_path, output_tsv_path, multiplier=1.2):
     
     # Check if neutral exists
     if 'neutral' not in emotion_counts.index:
-        print("\n⚠️  No 'neutral' emotion found in dataset. Returning original dataset.")
+        print("\n  No 'neutral' emotion found in dataset. Returning original dataset.")
         df.to_csv(output_tsv_path, sep='\t', index=False)
         return df
     
@@ -47,7 +47,7 @@ def downsample_neutral(input_tsv_path, output_tsv_path, multiplier=1.2):
     non_neutral_counts = emotion_counts[emotion_counts.index != 'neutral']
     
     if len(non_neutral_counts) == 0:
-        print("\n⚠️  Dataset only contains neutral. No downsampling needed.")
+        print("\n  Dataset only contains neutral. No downsampling needed.")
         df.to_csv(output_tsv_path, sep='\t', index=False)
         return df
     
@@ -65,7 +65,7 @@ def downsample_neutral(input_tsv_path, output_tsv_path, multiplier=1.2):
     print(f"   Target neutral count: {target_neutral:,} ({multiplier}x second largest)")
     
     if neutral_count <= target_neutral:
-        print(f"\n✅ Neutral already at or below target. No downsampling needed.")
+        print(f"\n Neutral already at or below target. No downsampling needed.")
         df.to_csv(output_tsv_path, sep='\t', index=False)
         return df
     
@@ -94,9 +94,9 @@ def downsample_neutral(input_tsv_path, output_tsv_path, multiplier=1.2):
         pct = (count / len(result_df)) * 100
         print(f"   {emotion:15s}: {count:5,} ({pct:5.2f}%)")
     
-    print(f"\n✅ Removed {neutral_count - target_neutral:,} neutral examples")
-    print(f"📉 Dataset reduced from {len(df):,} to {len(result_df):,} examples")
-    print(f"💾 Saved to: {output_tsv_path}")
+    print(f"\n Removed {neutral_count - target_neutral:,} neutral examples")
+    print(f" Dataset reduced from {len(df):,} to {len(result_df):,} examples")
+    print(f" Saved to: {output_tsv_path}")
     
     return result_df
 
@@ -130,7 +130,7 @@ def process_all_splits(input_dir, output_dir, multiplier=1.2):
             print(f"{'='*70}")
             downsample_neutral(input_path, output_path, multiplier)
         else:
-            print(f"\n⚠️  Skipping {filename} (not found)")
+            print(f"\n  Skipping {filename} (not found)")
 
 
 def main():
@@ -160,15 +160,15 @@ def main():
     
     # ============================================
     
-    print(f"\n📁 Input directory: {input_dir}")
-    print(f"📁 Output directory: {output_dir}")
-    print(f"🎯 Neutral multiplier: {NEUTRAL_MULTIPLIER}x second largest emotion")
+    print(f"\nInput directory: {input_dir}")
+    print(f" Output directory: {output_dir}")
+    print(f" Neutral multiplier: {NEUTRAL_MULTIPLIER}x second largest emotion")
     
     # Process all files
     process_all_splits(input_dir, output_dir, NEUTRAL_MULTIPLIER)
     
     print("\n" + "="*70)
-    print("✅ NEUTRAL DOWNSAMPLING COMPLETE!")
+    print("NEUTRAL DOWNSAMPLING COMPLETE!")
     print("="*70)
     
     print("\n💡 Tips:")

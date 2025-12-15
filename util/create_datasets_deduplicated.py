@@ -145,17 +145,17 @@ def process_goemotions_deduplicated(input_tsv_path, split_name):
     # Verify no duplicate texts
     duplicates = result_df[result_df.duplicated('text', keep=False)]
     if len(duplicates) > 0:
-        print(f"⚠️  WARNING: Found {len(duplicates)} duplicate texts!")
+        print(f"  WARNING: Found {len(duplicates)} duplicate texts!")
         print("First few duplicates:")
         print(duplicates.head())
     else:
-        print(f"✅ No duplicate texts found!")
+        print(f" No duplicate texts found!")
     
-    print(f"\n📊 {split_name.upper()} Statistics:")
+    print(f"\n {split_name.upper()} Statistics:")
     print(f"   Total unique texts: {len(result_df):,}")
     
     label_counts = result_df['label'].value_counts()
-    print(f"\n📋 Emotion distribution:")
+    print(f"\n Emotion distribution:")
     for emotion, count in label_counts.items():
         pct = (count / len(result_df)) * 100
         print(f"   {emotion:15s}: {count:5,} ({pct:5.2f}%)")
@@ -210,13 +210,13 @@ def process_journal_deduplicated(input_csv_path):
     # Verify no duplicate texts
     duplicates = result_df[result_df.duplicated('text', keep=False)]
     if len(duplicates) > 0:
-        print(f"⚠️  WARNING: Found {len(duplicates)} duplicate texts!")
+        print(f"  WARNING: Found {len(duplicates)} duplicate texts!")
         print("First few duplicates:")
         print(duplicates.head())
     else:
-        print(f"✅ No duplicate texts found!")
+        print(f" No duplicate texts found!")
     
-    print(f"\n📊 Journal Statistics:")
+    print(f"\n Journal Statistics:")
     print(f"   Total unique entries: {len(result_df):,}")
     
     label_counts = result_df['label'].value_counts()
@@ -334,7 +334,7 @@ def main():
     print("="*70)
     print("DEDUPLICATED DATASET CREATION")
     print("="*70)
-    print("\n🎯 Goal: One text = One label (no inflation)")
+    print("\n Goal: One text = One label (no inflation)")
     print("   Multi-label texts: Randomly pick ONE emotion")
     print("   Result: Each unique text appears exactly ONCE")
     
@@ -370,7 +370,7 @@ def main():
     val_go.to_csv(f'{go_output_path}validate_sent_go.tsv', sep='\t', index=False)
     test_go.to_csv(f'{go_output_path}test_sent_go.tsv', sep='\t', index=False)
     
-    print(f"\n✅ Saved GoEmotions to: {go_output_path}")
+    print(f"\n Saved GoEmotions to: {go_output_path}")
     
     # ============================================
     # PROCESS JOURNAL
@@ -391,7 +391,7 @@ def main():
     val_j.to_csv(f'{journal_output_path}validate_sent_journal.tsv', sep='\t', index=False)
     test_j.to_csv(f'{journal_output_path}test_sent_journal.tsv', sep='\t', index=False)
     
-    print(f"\n✅ Saved Journal to: {journal_output_path}")
+    print(f"\n Saved Journal to: {journal_output_path}")
     
     # ============================================
     # FINAL SUMMARY
@@ -417,21 +417,21 @@ def main():
     print("COMPARISON: Original vs Deduplicated")
     print("="*70)
     
-    print("\n📈 GoEmotions Training Set:")
+    print("\n GoEmotions Training Set:")
     print("   Original (inflated):      23,812 rows")
     print(f"   Deduplicated (this run):  {len(train_go):5,} rows")
     print(f"   Reduction:                {23812 - len(train_go):5,} rows removed")
     
-    print("\n📈 Journal Total:")
+    print("\n Journal Total:")
     print("   Original (inflated):      2,029 rows")
     print(f"   Deduplicated (this run):  {len(journal_df):5,} rows")
     print(f"   Reduction:                {2029 - len(journal_df):5,} rows removed")
     
     print("\n" + "="*70)
-    print("✅ DEDUPLICATED DATASETS CREATED SUCCESSFULLY!")
+    print(" DEDUPLICATED DATASETS CREATED SUCCESSFULLY!")
     print("="*70)
     
-    print("\n💡 Key points:")
+    print("\n Key points:")
     print("   ✓ Each text appears exactly ONCE")
     print("   ✓ Multi-label texts: randomly picked ONE emotion")
     print("   ✓ No duplicate texts with different labels")

@@ -126,14 +126,14 @@ def main():
     
     # ============================================
     
-    print(f"\n📁 Input file: {journal_csv}")
-    print(f"📁 Output directory: {output_dir}")
-    print(f"\n🎯 Creating {len(SPLIT_CONFIGS)} different split configurations")
+    print(f"\n Input file: {journal_csv}")
+    print(f" Output directory: {output_dir}")
+    print(f"\n Creating {len(SPLIT_CONFIGS)} different split configurations")
     
     # Check if input exists
     if not os.path.exists(journal_csv):
-        print(f"\n⚠️  ERROR: Input file not found: {journal_csv}")
-        print("\n💡 Make sure data.csv exists")
+        print(f"\n  ERROR: Input file not found: {journal_csv}")
+        print("\n Make sure data.csv exists")
         return
     
     # Import the processing function
@@ -142,14 +142,14 @@ def main():
     from util.create_datasets_deduplicated import process_journal_deduplicated
     
     # Process journal data
-    print(f"\n📂 Processing journal data...")
+    print(f"\n Processing journal data...")
     df = process_journal_deduplicated(journal_csv)
     
     if len(df) == 0:
-        print("\n⚠️  ERROR: No journal data was processed")
+        print("\n  ERROR: No journal data was processed")
         return
     
-    print(f"✅ Processed {len(df)} journal entries")
+    print(f" Processed {len(df)} journal entries")
     
     # Verify columns
     required_cols = ['text', 'label', 'source']
